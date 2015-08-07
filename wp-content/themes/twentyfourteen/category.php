@@ -16,7 +16,7 @@ get_header(); ?>
 
 				
 			<?php if ( have_posts() ) : ?>
-								#dsadasdasdasdas
+								
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
 
