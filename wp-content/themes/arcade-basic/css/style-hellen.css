@@ -3,9 +3,22 @@
  * Read more on my blog: http://webbb.be/blog/
  */
 
-
+body{
+	background:#424348;
+	color:#fff;
+}
+.page-carier,
+.page-carier h2{
+	color: #fff;
+}
+h2, p, a, span{color:#fff;}
  i,i:visited { color: #fff; }
  i:hover { color: #fff; }
+
+ .rec_grid a:hover
+ {
+	 text-decoration: none;
+ }
 
 .social {
 	float: left;
@@ -15,8 +28,7 @@
 	height: 80px;
 	display: block; text-align: center; 
 	line-height:70px;
-	 color: #fff;
-	
+	color: #fff;
 	position: relative;
 	transform:rotateY(0deg);
 	transition:transform .25s ease-out;
@@ -50,6 +62,7 @@
 	Youtube #FF3333
 	Dribbble #ea4c89
 */
+
 .social >.back { background: #00a5a1; }
 .social.social-skype > .back { background: #00a5a1; }
 .social.social-linkedin > .back { background: #00a5a1; }
@@ -104,4 +117,30 @@
 		float: none;
 		display: inline-block;
 	}
+}
+.recruiters img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.rec_img{overflow: hidden;}
+.rec_grid img {
+	max-width: none;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.rec:hover{
+	color:#00a5a1;
+	text-decoration: none;
+	text-align: none;
+}
+.rec{
+	padding: 0 7px;
+}
+.rec_grid img:hover {
+	/*opacity: 0.4;*/
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+	transform: scale3d(1.1, 1.1, 1);
 }
