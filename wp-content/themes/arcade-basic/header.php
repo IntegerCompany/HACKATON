@@ -61,11 +61,17 @@ $space_class = '';
 				<div class="clearfix"></div>
 			</nav><!-- #site-navigation -->
 
+			<h1><?php echo home_url() == get_permalink() ? 'home': 'no home'; ?></h1>
+
 			 <div class="title-card-wrapper">
                 <div class="title-card">
     				<div id="site-meta">
     					<h1 id="site-title">
-    						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<?php if(is_home()){
+    							bloginfo( 'name' );
+							} else { ?>
+								<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<?php } ?>
     					</h1>
 
     					<?php if ( $bavotasan_theme_options['header_icon'] ) { ?>
