@@ -3,8 +3,6 @@
  * The template for displaying the footer.
  *
  * Contains footer content and the closing of the main and #page div elements.
- *
- * @since 1.0.0
  */
 $bavotasan_theme_options = bavotasan_theme_options();
 ?>
