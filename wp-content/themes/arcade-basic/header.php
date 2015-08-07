@@ -26,27 +26,39 @@ $space_class = '';
 ?>
 <body <?php body_class(); ?>>
 
-	<div id="page">
+	<div id="page" class="container-fluid mar-pad">
+		<div class="row">
+			<div>
 
 		<header id="header">
-			<nav id="site-navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-				<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
-				<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
+			<nav id="site-navigation" class="navbar navbar-inverse navbar-fixed-top navbar-transparent" role="navigation">
+				<div class="row">
+					<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
+					<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
 
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				    </button>
-				</div>
+					<!--<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div> -->
 
-				<div class="collapse navbar-collapse">
-					<?php
-					$menu_class = ( is_rtl() ) ? ' navbar-right' : '';
-					wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'nav navbar-nav' . $menu_class, 'fallback_cb' => 'bavotasan_default_menu' ) );
-					?>
+					<div class="collapse navbar-collapse">
+
+						<div class="logo-head container"><?php
+								wp_reset_query();
+								query_posts('page_id=41');
+								if(have_posts()) { while(have_posts()) { the_post(); ?>
+									<?php  the_post_thumbnail('medium');;?>
+								<?php } wp_reset_query(); }
+									$menu_class = ( is_rtl() ) ? ' navbar-right' : '';
+									wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'nav navbar-nav font-helvetic-light head-menu' . $menu_class, 'fallback_cb' => 'bavotasan_default_menu' ) );
+								?>
+						</div>
+					</div>
 				</div>
+				<div class="clearfix"></div>
 			</nav><!-- #site-navigation -->
 
 			 <div class="title-card-wrapper">
