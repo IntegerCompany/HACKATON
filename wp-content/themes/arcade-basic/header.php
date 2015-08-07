@@ -23,7 +23,10 @@
 <?php
 $bavotasan_theme_options = bavotasan_theme_options();
 $space_class = '';
+
+$is_home_page = array_search('home', get_body_class() );
 ?>
+
 <body <?php body_class(); ?>>
 
 	<div id="page" class="container-fluid mar-pad">
@@ -61,13 +64,11 @@ $space_class = '';
 				<div class="clearfix"></div>
 			</nav><!-- #site-navigation -->
 
-			<h1><?php echo home_url() == get_permalink() ? 'home': 'no home'; ?></h1>
-
 			 <div class="title-card-wrapper">
                 <div class="title-card">
     				<div id="site-meta">
     					<h1 id="site-title">
-							<?php if(is_home()){
+							<?php if( is_int($is_home_page) ){
     							bloginfo( 'name' );
 							} else { ?>
 								<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -95,8 +96,13 @@ $space_class = '';
     				</div>
 
     				<?php
-    				// Header image section
-    				bavotasan_header_images();
+						// Header image section
+
+						if( is_int($is_home_page) ){
+							echo do_shortcode('[mbYTPlayer url="https://www.youtube.com/watch?v=W3CDMDktEBc" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
+						} else {
+							bavotasan_header_images();
+						}
     				?>
 				</div>
 			</div>
