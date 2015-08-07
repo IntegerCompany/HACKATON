@@ -10,5 +10,5 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage whitesquare
+ * @subpackage integet_theme
  */

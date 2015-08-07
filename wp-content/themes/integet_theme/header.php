@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <div class="wrapper">
 	<header>
-		<a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php echo __('Whitesquare logo', 'whitesquare'); ?>"></a>
+		<a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php echo __('Whitesquare logo', 'integet_theme'); ?>"></a>
 		<?php get_search_form(); ?> 
 	</header>
 	<nav class="main-navigation">

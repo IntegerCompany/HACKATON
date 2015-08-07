@@ -1,6 +1,6 @@
 <?php
 function enqueue_styles() {
- wp_enqueue_style( 'whitesquare-style', get_stylesheet_uri());
+ wp_enqueue_style( 'integet_theme-style', get_stylesheet_uri());
  wp_register_style('font-style', 'http://fonts.googleapis.com/css?family=Oswald:400,300');
  wp_enqueue_style( 'font-style');
 }
