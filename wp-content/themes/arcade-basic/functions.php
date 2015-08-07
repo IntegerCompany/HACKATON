@@ -11,6 +11,8 @@ define( 'BAVOTASAN_THEME_VERSION', trim( $bavotasan_theme_data->Version ) );
 define( 'BAVOTASAN_THEME_NAME', $bavotasan_theme_data->Name );
 define( 'BAVOTASAN_THEME_FILE', get_option( 'template' ) );
 
+define("TEXTDOMAIN", "integer");
+
 /**
  * Includes
  *
