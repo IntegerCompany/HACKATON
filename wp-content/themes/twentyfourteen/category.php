@@ -14,8 +14,9 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
+				
 			<?php if ( have_posts() ) : ?>
-
+								
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
 

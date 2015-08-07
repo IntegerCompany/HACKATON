@@ -3142,13 +3142,13 @@ input[type="button"].btn-block {
   .navbar-inverse .navbar-text {
     color: #999999; }
   .navbar-inverse .navbar-nav > li > a {
-    color: #999999; }
+    color: white; }
     .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-      color: #fff;
+      color: #67BEB6;
       background-color: transparent; }
   .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: #090909; }
+    color: #67BEB6;
+    /*background-color: #090909;*/ }
   .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
@@ -3163,7 +3163,7 @@ input[type="button"].btn-block {
     border-color: #101010; }
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #090909;
-    color: #fff; }
+    color: #67BEB6; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
       border-color: #090909; }
@@ -3998,10 +3998,12 @@ input, textarea {
 /* =Main Navigation
 -------------------------------------------------------------- */
 .admin-bar .navbar-fixed-top {
-  top: 32px; }
+  top: 32px;
+  transition: .4s;}
   @media (max-width: 768px) {
     .admin-bar .navbar-fixed-top {
-      top: 46px; } }
+      top: 46px;
+      transition: .4s;} }
 @media (max-width: 480px) {
   .navbar-fixed-top {
     top: 0 !important;
@@ -5077,3 +5079,31 @@ a img.aligncenter {
 
 .sticky {
   display: block; }
+
+.head-menu{
+  float:right;
+
+}
+.navbar-transparent{
+  background: transparent;
+}
+
+.head-menu li a{
+  font-size:2rem !important;
+  color:white ;
+  line-height: 20px !important;
+}
+
+.mar-pad{
+  margin:0;
+  padding:0;
+}
+
+.logo-head img{
+  height: 80px;
+  width: auto;
+}
+
+.logo-head ul{
+  margin-top: 1%;
+}
