@@ -682,3 +682,11 @@ function bavotasan_wrapper_end() {
 	</div>
 	<?php
 }
+
+add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+
+// регистрируем файл стилей и добавляем его в очередь
+function register_plugin_styles() {
+	wp_register_style( 'hellen-style', get_template_directory_uri(). '/css/style-hellen.css' );
+	wp_enqueue_style( 'hellen-style' );
+}
