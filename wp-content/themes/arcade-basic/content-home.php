@@ -4,6 +4,7 @@
  *
  */
 
+
 $pageID = 16;
 $homeContent = get_post($pageID, 'ARRAY_A');
 
@@ -34,11 +35,24 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 
 
 <!-- Map Section -->
-<div id="map"></div>
 
+<div class="container-fluid">
+    <div id="map" style="height: 500px;"></div>
+</div>
+
+<!-- Plugin JavaScript -->
+<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery.easing.min.js"></script>
 
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/grayscale.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/library/js/grayscale.js"></script>
+
+<script>
+    var mapOptionsPhp = {
+        'latitude': '49.80947953',
+        'longitude': '24.01807922',
+        'markerImg': '<?php echo get_template_directory_uri(); ?>/library/images/map-marker.png',
+    };
+</script>
