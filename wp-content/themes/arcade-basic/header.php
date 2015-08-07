@@ -50,7 +50,7 @@ $space_class = '';
 								wp_reset_query();
 								query_posts('page_id=41');
 								if(have_posts()) { while(have_posts()) { the_post(); ?>
-									<?php  the_post_thumbnail('medium');;?>
+
 								<?php } wp_reset_query(); }
 									$menu_class = ( is_rtl() ) ? ' navbar-right' : '';
 									wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'nav navbar-nav font-helvetic-light head-menu' . $menu_class, 'fallback_cb' => 'bavotasan_default_menu' ) );

@@ -8,7 +8,7 @@ get_header(); ?>
 
 	<div class="container">
 		<div class="row">
-			<div id="primary" <?php bavotasan_primary_attr(); ?>>
+			<div id="primary" class="col-md-10 hfeed post-alone" <?php bavotasan_primary_attr(); ?>>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', get_post_format() ); ?>
@@ -19,11 +19,8 @@ get_header(); ?>
 						<div class="next pull-right"><?php next_post_link( '%link', __( '%title &rarr;', 'arcade' ) ); ?></div>
 					</div><!-- #posts-pagination -->
 
-					<?php comments_template( '', true ); ?>
-
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<?php get_sidebar(); ?>
 		</div>
 	</div>
 

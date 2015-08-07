@@ -5073,3 +5073,19 @@ a img.aligncenter {
 .logo-head ul{
   margin-top: 1%;
 }
+
+.post-alone p, .post-alone img{
+  display:inline-block;
+  vertical-align: top;
+}
+
+.post-alone img{
+  max-width:35%;
+  float: left;
+}
+
+.post-alone p{
+  max-width:59%;
+  margin-left: 5%;
+
+}

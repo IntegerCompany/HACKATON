@@ -12,12 +12,15 @@
 		// Display a thumbnail if one exists and not on single post
 		bavotasan_display_post_thumbnail();
 
-	    get_template_part( 'content', 'header' ); ?>
+		get_template_part( 'content', 'header' ); ?>
 
 	    <div class="entry-content description clearfix">
-		    <?php
-			if ( is_singular() && ! is_front_page() )
-			    the_content( __( 'Read more', 'arcade') );
+
+			<?php
+			if ( is_singular() && ! is_front_page() ) {
+				the_content(__('Read more', 'arcade'));
+				the_post_thumbnail('medium');
+			}
 			else
 				the_excerpt();
 			?>
