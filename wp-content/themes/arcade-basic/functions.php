@@ -13,6 +13,8 @@ define( 'BAVOTASAN_THEME_FILE', get_option( 'template' ) );
 
 define("TEXTDOMAIN", "integer");
 
+add_filter('show_admin_bar', '__return_false');
+
 /**
  * Includes
  *
@@ -682,3 +684,67 @@ function bavotasan_wrapper_end() {
 	</div>
 	<?php
 }
+
+
+
+
+
+// MY FUNCTIONALITY
+
+
+    function load_blogs()
+    {
+        $args = array(
+            'posts_per_page'   => 12,
+            'offset'           => 0,
+            'category'         => 2,
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'post',
+            'post_status'      => 'publish',
+            'suppress_filters' => true
+        );
+        return get_posts( $args );
+    }
+
+
+function more_blogs()
+{
+    $args = array(
+        'posts_per_page'   => 12,
+        'offset'           => $_POST['offset'],
+        'category'         => 2,
+        'category_name'    => '',
+        'orderby'          => 'date',
+        'order'            => 'DESC',
+        'post_type'        => 'post',
+        'post_status'      => 'publish',
+        'suppress_filters' => true
+    );
+    $blogs = get_posts( $args );
+
+    foreach ($blogs as $blog)
+    {
+        $date = explode(' ', $blog->post_date);
+        $date = explode('-', $date[0]);
+        ?>
+        <li class="col-md-4 blog-element" >
+            <a href="<?php echo get_permalink($blog->ID); ?>">
+                <div class="img_block">
+                    <?php echo get_the_post_thumbnail ( $blog->ID, 'medium', '') ?>
+                </div>
+                <div class="title_block clearfix">
+                    <h3><?php echo $blog->post_title; ?></h3>
+                    <div class="publ_date"><i class="fa fa-calendar"></i>  <?php echo date('jS \of F Y', mktime(0,0,0,$date[2], $date[1], $date[0])); ?></div>
+                    <div class="publ_author"><?php echo __('by', TEXTDOMAIN).' '.get_the_author_meta('user_nicename', (int)$blog->post_author);//.$author_post_nam.' '.$author_post_lName; ?></div>
+                </div>
+            </a>
+        </li>
+    <?php
+    }
+
+    die();
+}
+add_action( 'wp_ajax_nopriv_more_blogs', 'more_blogs' );
+add_action( 'wp_ajax_more_blogs', 'more_blogs' );

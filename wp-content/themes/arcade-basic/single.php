@@ -4,13 +4,14 @@
  *
  * @since 1.0.0
  */
-get_header(); ?>
+get_header();
+
+?>
 
 	<div class="container">
 		<div class="row">
 			<div id="primary" <?php bavotasan_primary_attr(); ?>>
 				<?php while ( have_posts() ) : the_post(); ?>
-
 					<?php get_template_part( 'content', get_post_format() ); ?>
 
 					<div id="posts-pagination" class="clearfix">
