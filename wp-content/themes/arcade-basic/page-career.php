@@ -9,28 +9,34 @@ get_header();?>
 
 
 <div class="container page-carier">
-	<div class="row">
-		<h2 class="text-center"><?php the_title();?></h2>
-		<div class="container">
-			<div class="col-md-8 col-md-offset-2">
-				<iframe width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	<div class="container">
+		<div class="row">
+			<h2 class="text-center"><?php the_title();?></h2>
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2">
+					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<h2 class="text-center">Positions</h2>
-		<div class="col-md-6 col-xs-12 text-center">
-			<a href="#">
-				<h2 class="position_title">Android</h2>
-			</a>
-			<p>description</p>
-		</div>
-		<div class="col-md-6 col-xs-12 text-center">
-			<a href="#">
-				<h2 class="position_title">Web</h2>
-			</a>
-			<p>description</p>
-		</div>
+		<?php $posts = get_posts("cat=2&orderby=date&numberposts=12"); ?>
+		<?php if ($posts) : ?>
+			<?php foreach ($posts as $post) : setup_postdata ($post); ?>
+				<div class="col-md-4 col-xs-5  text-center pos-div"><a class="career-pos-color" href="javascript:void(0);">
+					<?php
+					if(function_exists('add_theme_support')) {
+						?>
+						<h3 class="position_title" > <?php echo the_title(); ?></h3 >
+						<?php
+						the_post_thumbnail('medium');
+						}
+					?></a>
+				</div>
+
+			<?php endforeach; ?>
+		<?php endif; ?>
 	</div>
 	<div class="row recruiters">
 		<h2 class="text-center">Let's meet!</h2>
