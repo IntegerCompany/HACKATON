@@ -79,11 +79,17 @@ h2, p, a, span{color:#fff;}
 }
 #lang-switch ul li{
 	display:inline-block;
+	border-right: 1px solid #fff;
+	padding-right: 3px;
 }
 #lang-switch ul li a:hover{
 	text-decoration: none;
 	color: #ffffff;
 }
+#lang-switch li:last-child {
+	border-right: none;
+}
+
 #lang-switch{
 	float: left;
 	text-decoration: none;
@@ -132,7 +138,7 @@ h2, p, a, span{color:#fff;}
 	backface-visibility: hidden;
 }
 .rec:hover{
-	color:#00a5a1;
+	color:#67beb6;
 	text-decoration: none;
 	text-align: none;
 }
@@ -207,8 +213,16 @@ h2, p, a, span{color:#fff;}
 	margin: 50px 0 20px 0;
 }
 @media (max-width: 992px){
+	.media-row{
+		margin: 0;
+	}
 	.pos-div{
-		width: 95%;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pos-div h3 {
+		font-size: 1.3em;
 	}
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
