@@ -5080,12 +5080,10 @@ a img.aligncenter {
 }
 
 .post-alone img{
-  max-width:35%;
   float: left;
 }
 
 .post-alone p{
-  max-width:59%;
   margin-left: 5%;
 
 }

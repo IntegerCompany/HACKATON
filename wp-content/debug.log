@@ -452,3 +452,19 @@
 [07-Aug-2015 10:57:24 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Не вдалося підключитися, оскільки інший комп'ютер не надіслав відповіді в належний період часу, або сталася помилка наявного підключення, оскільки хосту не вдалося відповісти.
  in K:\home\localhost\www\HACKATON\wp-includes\wp-db.php on line 1473
 [07-Aug-2015 13:01:39 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in K:\home\localhost\www\HACKATON\wp-includes\update.php on line 457
+[07-Aug-2015 18:28:17 UTC] PHP Notice:  Undefined variable: blog in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 14
+[07-Aug-2015 18:28:17 UTC] PHP Notice:  Trying to get property of non-object in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 14
+[07-Aug-2015 18:28:17 UTC] PHP Notice:  Undefined offset: 2 in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:28:17 UTC] PHP Notice:  Undefined offset: 1 in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:28:17 UTC] PHP Warning:  mktime() expects parameter 6 to be long, string given in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:28:22 UTC] PHP Notice:  Undefined variable: blog in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 14
+[07-Aug-2015 18:28:22 UTC] PHP Notice:  Trying to get property of non-object in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 14
+[07-Aug-2015 18:28:22 UTC] PHP Notice:  Undefined offset: 2 in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:28:22 UTC] PHP Notice:  Undefined offset: 1 in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:28:22 UTC] PHP Warning:  mktime() expects parameter 6 to be long, string given in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 16
+[07-Aug-2015 18:43:09 UTC] PHP Parse error:  syntax error, unexpected '}' in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content-header.php on line 53
+[08-Aug-2015 15:44:06 UTC] PHP Parse error:  syntax error, unexpected '<' in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 42
+[08-Aug-2015 15:44:33 UTC] PHP Notice:  Undefined variable: bavotasan_theme_options in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 29
+[08-Aug-2015 15:44:33 UTC] PHP Notice:  Undefined variable: bavotasan_theme_options in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content.php on line 35
+[08-Aug-2015 15:46:02 UTC] PHP Parse error:  syntax error, unexpected '}' in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content-header.php on line 53
+[08-Aug-2015 15:46:08 UTC] PHP Parse error:  syntax error, unexpected '}' in K:\home\localhost\www\HACKATON\wp-content\themes\arcade-basic\content-header.php on line 53
