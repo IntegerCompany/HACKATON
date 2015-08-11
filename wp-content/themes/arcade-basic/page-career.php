@@ -19,12 +19,12 @@ get_header();?>
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row media-row">
 		<h2 class="text-center">Positions</h2>
 		<?php $posts = get_posts("cat=2&orderby=date&numberposts=12"); ?>
 		<?php if ($posts) : ?>
 			<?php foreach ($posts as $post) : setup_postdata ($post); ?>
-				<div class="col-md-4 col-xs-5  text-center pos-div"><a class="career-pos-color" href="javascript:void(0);">
+				<div class="col-md-4  text-center pos-div"><a class="career-pos-color" href="javascript:void(0);">
 					<?php
 					if(function_exists('add_theme_support')) {
 						?>
