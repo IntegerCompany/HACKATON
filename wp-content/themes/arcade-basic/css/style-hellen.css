@@ -81,6 +81,7 @@ h2, p, a, span{color:#fff;}
 	display:inline-block;
 	border-right: 1px solid #fff;
 	padding-right: 3px;
+	line-height: 1em;
 }
 #lang-switch ul li a:hover{
 	text-decoration: none;
