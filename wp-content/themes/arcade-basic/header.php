@@ -28,6 +28,7 @@ $is_home_page = array_search('home', get_body_class() );
 ?>
 
 <body <?php body_class(); ?>>
+	<a href="mailto:kryvun.roman@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us','linkup'); ?></a>
 
 	<div id="page" class="container-fluid mar-pad">
 		<div class="row">
@@ -99,7 +100,8 @@ $is_home_page = array_search('home', get_body_class() );
 						// Header image section
 
 						if( is_int($is_home_page) ){
-							echo do_shortcode('[mbYTPlayer url="https://www.youtube.com/watch?v=W3CDMDktEBc" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
+							$video_url = 'https://www.youtube.com/watch?v=63Rvjw-K9vM';
+							echo do_shortcode('[mbYTPlayer url="'.$video_url.'" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
 						} else {
 							bavotasan_header_images();
 						}
