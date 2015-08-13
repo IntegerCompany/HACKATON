@@ -31,14 +31,16 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 </style>
 
 <div id="home-description" class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-6">
-                <?php echo get_the_post_thumbnail( $pageID, 'large'); ?>
-            </div>
-            <div class="col-md-6">
-                <h1><?php echo $homeContent['post_title']; ?></h1>
-                <h2><?php echo $homeContent['post_content']; ?></h2>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <?php echo get_the_post_thumbnail( $pageID, 'large'); ?>
+                </div>
+                <div class="col-md-6">
+                    <h1><?php echo $homeContent['post_title']; ?></h1>
+                    <h2><?php echo $homeContent['post_content']; ?></h2>
+                </div>
             </div>
         </div>
     </div>

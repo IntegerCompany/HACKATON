@@ -9,6 +9,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 	</main><!-- main -->
 
 	<footer id="footer" role="contentinfo">
+		<a href="mailto:kryvun.roman@gmail.com" id="write-us-mob" target="_blank" style="position: relative;">write us</a>
 		<div id="footer-content" class="container">
 			<div class="row">
 				<div class="copyright col-lg-12">

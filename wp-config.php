@@ -15,7 +15,7 @@
  */
 
 /** The name of the database for WordPress */
-define('DB_NAME', 'database');
+define('DB_NAME', 'todo');
 
 /** MySQL database username */
 define('DB_USER', 'root');
