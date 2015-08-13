@@ -186,10 +186,12 @@ function bavotasan_add_js() {
 		'fittext' => esc_attr( $fittext ),
 	) );
 
+	wp_enqueue_style( 'bootstrap', BAVOTASAN_THEME_URL .'/library/css/bootstrap.min.css', false, '4.3.1', 'all' );
+
+
 	wp_enqueue_style( 'theme_stylesheet', get_stylesheet_uri() );
 	wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Megrim|Raleway|Open+Sans:400,400italic,700,700italic', false, null, 'all' );
-	wp_enqueue_style( 'font_awesome', BAVOTASAN_THEME_URL .'/library/css/font-awesome.css', false, '4.3.0', 'all' );
-}
+	wp_enqueue_style( 'font_awesome', BAVOTASAN_THEME_URL .'/library/css/font-awesome.css', false, '4.3.0', 'all' );}
 endif; // bavotasan_add_js
 
 add_action( 'widgets_init', 'bavotasan_widgets_init' );
@@ -684,6 +686,14 @@ function bavotasan_wrapper_end() {
 	</div>
 	<?php
 }
+
+add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+
+// регистрируем файл стилей и добавляем его в очередь
+function register_plugin_styles() {
+	wp_register_style( 'hellen-style', get_template_directory_uri(). '/css/style-hellen.css' );
+	wp_enqueue_style( 'hellen-style' );
+}}
 
 
 

@@ -66,7 +66,7 @@
 			} )
 			.trigger( 'resize.title-card' )
 			.scroll( function () {
-				if ( $window.scrollTop() >= ( $more_site.data( 'scroll-to' ) - 50 ) )
+				if ( $window.scrollTop() >= 50 )
 					$( '#site-navigation' ).addClass( 'black' );
 				else
 					$( '#site-navigation' ).removeClass( 'black' );
