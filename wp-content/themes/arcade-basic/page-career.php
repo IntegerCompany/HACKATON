@@ -29,8 +29,10 @@ get_header();?>
 					if(function_exists('add_theme_support')) {
 						?>
 						<h3 class="position_title" > <?php echo the_title(); ?></h3 >
+						<div class="job-icon"><i class="fa fa-<?php echo  types_render_field( "job-icon" ); ?>" ></i ></div>
+
 						<?php
-						the_post_thumbnail('medium');
+						//the_post_thumbnail('medium');
 						}
 					?></a>
 				</div>
