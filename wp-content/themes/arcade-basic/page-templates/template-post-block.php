@@ -9,6 +9,7 @@
 if ( ! is_front_page() )
 	get_header(); ?>
 
+
 	<div class="container from-the-blog">
 		<div class="row">
 			<div id="primary" class="col-md-12 hfeed">

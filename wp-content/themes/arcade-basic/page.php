@@ -12,6 +12,7 @@
 get_header();
 ?>
 
+<?php ?>
 	<div class="container">
 		<div class="row">
 			<div id="primary" <?php bavotasan_primary_attr(); ?>>
@@ -20,6 +21,8 @@ get_header();
 					?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
+
+						<?php the_content(); ?>
 
 					    <div class="entry-content description clearfix">
 						    <?php the_content( __( 'Read more', 'arcade') ); ?>
@@ -36,5 +39,6 @@ get_header();
 			<?php get_sidebar(); ?>
 		</div>
 	</div>
+	<?php // */  ?>
 
 <?php get_footer(); ?>

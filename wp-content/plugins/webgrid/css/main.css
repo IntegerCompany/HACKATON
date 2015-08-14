@@ -1,0 +1,65 @@
+#grid-template.frontend{
+	padding: 0 5%;
+}
+#grid-template.frontend td {
+	vertical-align: top;
+}
+#grid-template.frontend table {
+	max-width: 100%;
+	border-collapse: separate;
+	border-spacing: 10px; 
+}
+#grid-template.frontend table td{
+	max-height: calc(100vw / 4);
+	max-height: -webkit-calc(100vw / 4);
+}
+#grid-template.frontend table td img {
+	max-height: calc(100vw / 4);
+	max-height: -webkit-calc(100vw / 4);
+	width: 100%;
+}
+#grid-template.frontend table td[colspan="2"] img {
+	
+}
+#grid-template.frontend table td[colspan="3"] img {
+	
+}
+#grid-template.frontend table td[colspan="4"] img {
+	
+}
+#grid-template.frontend table td[rowspan="2"] img {
+	max-height: calc(100vw / 2);
+	max-height: -webkit-calc(100vw / 2);
+}
+#grid-template.frontend table td[rowspan="3"] img {
+	max-height: calc( (100vw / 2) + (100vw / 4) );
+	max-height: -webkit-calc( (100vw / 2) + (100vw / 4 ) );
+}
+#grid-template.frontend table td[rowspan="4"] img {
+	max-height: calc( 100vw );
+	max-height: -webkit-calc( 100vw );
+}
+
+@media (max-width: 600px) {
+	#grid-template.frontend table td,
+	#grid-template.frontend table tr {
+		display: block;
+		max-height: 100%!important;
+		margin: 5px 0;
+	}
+	#grid-template.frontend table td {
+		/*max-height: 300px!important;
+		overflow: hidden;*/
+	}
+	#grid-template.frontend table td img {
+		width: 100%;
+		height: auto;
+		max-height: 100%!important;
+	}
+	#grid-template.frontend{
+		padding: 0;
+	}
+	#grid-template.frontend table{
+		border-spacing: 0px;
+	}
+}

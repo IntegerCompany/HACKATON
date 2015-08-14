@@ -1,0 +1,79 @@
+body{
+	background-color: transparent!important;
+}
+#wpbody{
+	background-color: #F1F1F1;
+}
+.inner-webgrid {
+	margin-top: 15px;
+	position: relative;
+}
+.task-window .grid-base {
+	width: 100%;
+	height: 300px;
+	resize: none;
+}
+.task-window {
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px;
+	background: #777;
+	border: 1px solid white;
+	display: none;
+}
+.task-window pre {
+	text-align: left;
+}
+#new-grid {
+	width: 80%;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 10px;
+	background: white;
+	text-align: center;
+}
+#new-grid #create-new-grid {
+	height: 50px;
+	width: 250px;
+	font-size: 18px;
+}
+#grid-template table {
+	width: 1920px;
+	  table-layout: fixed;
+}
+#grid-template table td {
+	border: 1px solid gray;
+	height: 402px!important;
+	width: 482px!important;
+	font-size: 14px!important;
+}
+#grid-template table td[colspan='2']{
+	width: calc(480px * 2 + 2px)!important;
+}
+#grid-template table td[colspan='3']{
+	width: calc(480px * 3 + 2px)!important;
+}
+#grid-template table td[colspan='4']{
+	width: calc(480px * 4 + 2px)!important;
+}
+#grid-template table td[rowspan='2'], /* height: 800px!important; */
+#grid-template table td[rowspan='3'], /* height: 1200px!important; */
+#grid-template table td[rowspan='4'] /* height: 1600px!important; */
+{
+	height: auto;
+}
+.dropzone > input[type=number] {
+	display: block !important;
+	position: absolute;
+	z-index: 101;
+	top: 0;
+}
+.dropzone{
+	display: table-cell;
+}
+#help {
+	margin: 10px auto;
+  	width: 45%;
+	background-color: white;
+	display: block;
+}
