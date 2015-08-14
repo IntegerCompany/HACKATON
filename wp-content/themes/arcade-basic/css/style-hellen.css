@@ -7,9 +7,16 @@ body{
 	background:#424348;
 	color:#fff;
 }
+body.basic, .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6{
+	font-family: "RobotoSlab Light";
+}
 .page-carier,
 .page-carier h2{
 	color: #fff;
+}
+a.logo-integer {
+	display: block;
+	margin-bottom: -35px;
 }
 h2, p, a, span{color:#fff;}
  i,i:visited { color: #fff; }
@@ -117,7 +124,7 @@ h2, p, a, span{color:#fff;}
 		line-height: 4em;
 	}
 	.pull-right {
-		width: 100%;
+		/*width: 100%;*/
 		text-align: center;
 	}
 	.social {
@@ -238,3 +245,14 @@ h2, p, a, span{color:#fff;}
 	}
 }
 
+/*@media (max-width: 480px) {*/
+	/*#menu-menu-1{float: none;}*/
+	/*.navbar-collapse {*/
+		/*background-color: black;*/
+		/*text-align: left;*/
+		/*top: 0;*/
+		/*position: fixed;*/
+		/*height: 80%;*/
+		/*width: 100%;*/
+	/*}*/
+/*}*/

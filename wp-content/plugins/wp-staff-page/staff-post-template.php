@@ -9,16 +9,17 @@ get_header(); ?>
         </div>
     </div>
     <div class="row staff-block">
+        <div class="col-md-12">
 
-        <?php query_posts(array('post_type' => 'staff_post'));
-        $mypost = array('post_type' => 'staff_post', "category_name" => "staff");
-        $loop = new WP_Query($mypost);
-        function get_meta($slug)
-        {
-            echo esc_html(get_post_meta(get_the_ID(), $slug, true));
-        }
+            <?php query_posts(array('post_type' => 'staff_post'));
+            $mypost = array('post_type' => 'staff_post', "category_name" => "staff", 'posts_per_page' => '-1');
+            $loop = new WP_Query($mypost);
+            function get_meta($slug)
+            {
+                echo esc_html(get_post_meta(get_the_ID(), $slug, true));
+            }
 
-        while ($loop->have_posts()) : $loop->the_post();
+            while ($loop->have_posts()) : $loop->the_post();
 
             ?>
             <div class="col-md-4 block-profile">
@@ -37,6 +38,7 @@ get_header(); ?>
                 </div>
             </div>
         <?php endwhile; ?>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">

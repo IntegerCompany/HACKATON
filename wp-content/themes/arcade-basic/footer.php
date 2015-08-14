@@ -53,6 +53,20 @@ $bavotasan_theme_options = bavotasan_theme_options();
 </div><!-- #page -->
 </div>
 </div>
+
+<script>
+	jQuery(function($){
+		// Bind the swipeHandler callback function to the swipe event on div.box
+		$( document ).on( "swipe", swipeHandler );
+
+		// Callback function references the event target and adds the 'swipe' class to it
+		function swipeHandler(  ){
+			$("body").addClass( "swipe" );
+			alert("swipe");
+		}
+	});
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>

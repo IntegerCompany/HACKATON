@@ -5,9 +5,6 @@
  */
 get_header();?>
 
-<?php //echo do_shortcode('[mbYTPlayer url="https://www.youtube.com/watch?v=W3CDMDktEBc" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="20" showcontrols="false" printurl="true" mute="true" loop="true" addraster="false"]'); ?>
-
-
 <div class="container page-carier">
 	<div class="container">
 		<div class="row">
@@ -21,7 +18,7 @@ get_header();?>
 	</div>
 	<div class="row media-row">
 		<h2 class="text-center">Positions</h2>
-		<?php $posts = get_posts("cat=2&orderby=date&numberposts=12"); ?>
+		<?php $posts = get_posts("cat=3&orderby=date&numberposts=12"); ?>
 		<?php if ($posts) : ?>
 			<?php foreach ($posts as $post) : setup_postdata ($post); ?>
 				<div class="col-md-4  text-center pos-div"><a class="career-pos-color" href="javascript:void(0);">

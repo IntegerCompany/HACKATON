@@ -1559,11 +1559,11 @@ table th[class*="col-"] {
   padding: 0 15px;
   background: rgba(34, 34, 34, 0.6);
   cursor: pointer;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Raleway medium','Helvetica Neue',Helvetica,Arial,sans-serif;
+  /*font-family: 'Raleway medium','Helvetica Neue',Helvetica,Arial,sans-serif;*/
   font-size: 15px;
   border: 0;
   text-decoration: none;

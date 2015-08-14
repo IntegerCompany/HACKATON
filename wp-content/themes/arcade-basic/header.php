@@ -40,13 +40,13 @@ $is_home_page = array_search('home', get_body_class() );
 					<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
 					<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
 
-					<!--<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> //!!!
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-					</div> -->
+					</div>
 
 					<div class="collapse navbar-collapse">
 
@@ -69,13 +69,14 @@ $is_home_page = array_search('home', get_body_class() );
 			 <div class="title-card-wrapper">
                 <div class="title-card">
     				<div id="site-meta">
-    					<h1 id="site-title">
-							<?php if( is_int($is_home_page) ){
-    							bloginfo( 'name' );
-							} else { ?>
-								<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-							<?php } ?>
-    					</h1>
+<!--    					<h1 id="site-title">-->
+<!--							--><?php //if( is_int($is_home_page) ){
+//    							bloginfo( 'name' );
+//							} else { ?>
+<!--								<a href="--><?php //echo esc_url( home_url() ); ?><!--" title="--><?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a>-->
+<!--							--><?php //} ?>
+<!--    					</h1>-->
+						<a class="logo-integer" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/integer-logo-white.png" alt=""/></a>
 
     					<?php if ( $bavotasan_theme_options['header_icon'] ) { ?>
     					<i class="fa <?php echo $bavotasan_theme_options['header_icon']; ?>"></i>
@@ -83,9 +84,9 @@ $is_home_page = array_search('home', get_body_class() );
     						$space_class = ' class="margin-top"';
     					} ?>
 
-    					<h2 id="site-description"<?php echo $space_class; ?>>
-    						<?php bloginfo( 'description' ); ?>
-    					</h2>
+<!--    					<h2 id="site-description"--><?php //echo $space_class; ?><!-->
+<!--    						--><?php //bloginfo( 'description' ); ?>
+<!--    					</h2>-->
 						<?php
 						/**
 						 * You can overwrite the defeault 'See More' text by defining the 'BAVOTASAN_SEE_MORE'

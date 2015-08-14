@@ -4,7 +4,6 @@
     font-size: 4em;
     line-height: 1.3;
     color: #fff!important;
-    font-family:   Roboto Slab, sans-serif !important;
     margin: 3%;
 }
 .staff-block{
@@ -37,15 +36,12 @@
     left: 0px;
     right: 0px;
     margin: 5% 10%;
-    font-family: Roboto Slab!important;
     color: #fff!important;
-    text-shadow: 0px 0px 24px rgb(60, 60, 60);
 }
 .name-staff{
     font-weight: 600;
     font-size: 1.85em;
     color: white!important;
-    font-family: Roboto Slab, sans-serif !important;
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +57,6 @@
     top: 3%;
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.82)!important;
-    font-family: Roboto Slab, sans-serif !important;
 }
 .staff-social{
     position: absolute;
@@ -81,7 +76,6 @@
     opacity: 0;
     font-size: 0.9em;
     color: rgba(255, 255, 252, 0.77)!important;
-    font-family: Roboto Slab, sans-serif !important;
 
 }
 .block-profile:hover .name-staff{
@@ -92,7 +86,6 @@
 .block-profile:hover .position-staff{
     opacity: 1;
     top: 9%;
-    text-shadow: 0px 0px 24px rgb(60, 60, 60);
 }
 .block-profile:hover .staff-social{
     opacity: 1;
