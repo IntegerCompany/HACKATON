@@ -1548,7 +1548,74 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr.danger:hover > th {
   background-color: #ebcccc; }
 
+
+#write-us {
+  display: block;
+  position: fixed!important;
+  height: 2.4em;
+  line-height: 2.2em;
+  width: 140px;
+  text-align: center;
+  padding: 0 15px;
+  background: rgba(34, 34, 34, 0.6);
+  cursor: pointer;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Raleway medium','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  border: 0;
+  text-decoration: none;
+  z-index: 5;
+  top: 43%;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  transform-origin: top right;
+}
+#write-us-mob {
+  display: none;
+  text-align: center;
+  margin: 10px auto 0em;
+  background-color: #0F0F0F;
+  font-size: 2em;
+  padding: 4px 0;
+  transition: .2s;
+  width: 40%;
+}
+#write-us-mob:before {
+  content: "\f040";
+  font-family: FontAwesome;
+  padding-right: .3em;
+  font-size: .8em;
+}
+#write-us:hover,
+#write-us-mob:hover {
+  background-color: #00A5A1;
+  text-decoration: none;
+  color: #ffffff;
+}
+#write-us,
+#write-us-mob {
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
 @media (max-width: 767px) {
+
+  #write-us-mob{
+    display: block;
+  }
+  #write-us{
+    display: none;
+  }
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -1587,13 +1654,6 @@ table th[class*="col-"] {
       .table-responsive > .table-bordered > tfoot > tr:last-child > th,
       .table-responsive > .table-bordered > tfoot > tr:last-child > td {
         border-bottom: 0; }
-
-  #write-us-mob{
-    display: block;
-  }
-  #write-us{
-    display: none;
-  }
 }
 fieldset {
   padding: 0;
@@ -3933,7 +3993,7 @@ input, textarea {
   line-height: 1;
   color: #fff; }
   #site-description.margin-top {
-    margin-top: 90px; }
+    margin-top: 40px; }
 
 #more-site {
   margin-top: 50px;
@@ -5246,44 +5306,6 @@ a img.aligncenter {
 
 .logo-head ul{
   margin-top: 1%;
-}
-#write-us {
-  display: block;
-  position: fixed!important;
-  height: 2.4em;
-  line-height: 2.2em;
-  width: 140px;
-  text-align: center;
-  padding: 0 15px;
-  background: rgba(34, 34, 34, 0.6);
-  cursor: pointer;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Raleway medium','Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-size: 15px;
-  border: 0;
-  text-decoration: none;
-  z-index: 5;
-  top: 43%;
-  right: 0;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transform-origin: top right;
-  -moz-transform-origin: top right;
-  transform-origin: top right;
-}
-#write-us-mob {
-  display: none;
-  text-align: center;
-  margin: 10px auto 0em;
-  background-color: #0F0F0F;
-  font-size: 2em;
-  padding: 4px 0;
-  transition: .2s;
-  width: 40%;
 }
 #page404 {
   height: 200px;
