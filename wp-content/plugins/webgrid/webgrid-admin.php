@@ -1,5 +1,7 @@
 <?php
 
+define('WEBGRID', 'web-grid');
+
 // Register stylesheets & scripts.
 add_action( 'admin_init', 'register_admin_styles' );
 function register_admin_styles() {
@@ -17,52 +19,59 @@ function register_admin_styles() {
 add_action( 'admin_menu', 'register_webgrid_menu_page' );
 function register_webgrid_menu_page() {
 
-	add_menu_page( 'Web Grid', 'Web Grid', 'manage_options', 'web-grid', 'web_grid_settings', 'dashicons-grid-view', 6 ); 
+	add_menu_page( 'Web Grid', 'Web Grid', 'manage_options', WEBGRID, 'web_grid_settings', 'dashicons-grid-view', 6 ); 
 
 }
 function web_grid_settings(){
 ?>
-<!--link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"-->
-<?php
-if(isset($_POST['grid'])){
-	update_option('grid_template', $_POST['table-grid']);
-}
 
-if(isset($_POST['title-submit'])){
-	update_option('thumb-text', $_POST['thumb-postid']);
-}
+<?php
+	if( $_GET['page'] == WEBGRID ){
 ?>
-<!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"-->
-<div class="inner-webgrid bt-wrapper">
+
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 <?php
-	$table = get_option('grid_template');
-	if(empty($table)){
-		echo "<div id='new-grid'>";
-			echo "Наразі не створено основного шаблону<br>Створіть новий шаблон для Сітки:<br>";
+	if(isset($_POST['grid'])){
+		update_option('grid_template', $_POST['table-grid']);
+	}
+
+	if(isset($_POST['title-submit'])){
+		update_option('thumb-text', $_POST['thumb-postid']);
+	}
+	?>
+	<!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"-->
+	<div class="inner-webgrid bt-wrapper">
+
+	<?php
+		$table = get_option('grid_template');
+		if(empty($table)){
+			echo "<div id='new-grid'>";
+				echo "Наразі не створено основного шаблону<br>Створіть новий шаблон для Сітки:<br>";
+				newgrid_template();
+			echo "</div>";
+		} else {
 			newgrid_template();
-		echo "</div>";
-	} else {
-		newgrid_template();
-		echo "<form method=post id='ids'>";
-		echo '<div id="grid-template">'.$table.'</div>';
-		?><input type='submit' class='btn btn-success' value="Зберегти id поста" name='title-submit'><?php
-		echo "</form>";
-	}
-?>
-<style type="text/css">
-	#adminmenumain {
-		position: relative;
-		z-index: 0;
-	}
-</style>
-	<!--div class="col-xs-6">
-		<div class="dropzone" data-width="960" data-height="540" data-resize="true" data-url="canvas.php" style="width: 100%;" data-image="<?php echo bloginfo('template_url'); ?>/../../1.jpg">
-		  <input type="file" name="thumb" />
-		</div>
-	</div-->
-</div>
+			echo "<form method=post id='ids'>";
+			echo '<div id="grid-template">'.$table.'</div>';
+			?><input type='submit' class='btn btn-success' value="Зберегти id поста" name='title-submit'><?php
+			echo "</form>";
+		}
+	?>
+	<style type="text/css">
+		#adminmenumain {
+			position: relative;
+			z-index: 0;
+		}
+	</style>
+		<!--div class="col-xs-6">
+			<div class="dropzone" data-width="960" data-height="540" data-resize="true" data-url="canvas.php" style="width: 100%;" data-image="<?php echo bloginfo('template_url'); ?>/../../1.jpg">
+			  <input type="file" name="thumb" />
+			</div>
+		</div-->
+	</div>
 <?php
+	}
 }
 
 function newgrid_template() {

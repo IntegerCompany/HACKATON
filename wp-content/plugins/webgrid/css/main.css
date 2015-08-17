@@ -1,8 +1,18 @@
+#grid-template.frontend + .webgrid-loader {
+    height: 64px;
+    width: 62px;
+    background-size: cover;
+    background: url(../img/webgrid-loader.gif);
+    margin: 0 auto;
+}
 #grid-template.frontend{
 	padding: 0 5%;
+	display: none;
 }
 #grid-template.frontend td {
-	vertical-align: top;
+	vertical-align: middle;
+	padding: 0;
+	border: none;
 }
 #grid-template.frontend table {
 	max-width: 100%;
@@ -38,6 +48,45 @@
 #grid-template.frontend table td[rowspan="4"] img {
 	max-height: calc( 100vw );
 	max-height: -webkit-calc( 100vw );
+}
+#grid-template.frontend table td .dark {
+	background-color: rgba(25,25,25,.5);
+	color: white;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease-in;
+	-moz-transition: all 1s ease-in;
+	-webkit-transition: all 1s ease-in;
+    /* ---- Vertical align ---- */
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	/* ------------------------ */
+}
+#grid-template.frontend table td a:hover > .dark {
+	opacity: 0;
+	transition: all .7s ease-out;
+	-moz-transition: all .7s ease-out;
+	-webkit-transition: all .7s ease-out;
+}
+#grid-template.frontend table td .dark > h3 {
+	margin: 0;
+	color: white;
+	padding: 0 10%;
+    text-align: center;
+}
+#grid-template.frontend table td > a {
+	position: relative;
+	display: block;
 }
 
 @media (max-width: 600px) {

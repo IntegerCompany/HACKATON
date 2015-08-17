@@ -6,7 +6,15 @@
  */
 /*
 Plugin Name: WebGrid
-Version: 1.0
+Description: Plugin for universal photo-grid with links to the posts
+Version: 1.3
+Changelog: 
+
+v1.3
+Optimized ajax.
+Fixed major bug that crashed Types and QTranslate.
+Now Requires Bootstrap on frontend.
+Added Fancy loader
 */
 
 if ( !function_exists( 'add_action' ) ) {
