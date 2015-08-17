@@ -40,11 +40,11 @@ Arcade is distributed under the terms of the GNU GPL
 }
 @font-face {
     font-family: 'RobotoSlab Light';
-    src: url('fonts/RobotoSlab-Light-webfont.eot');
-    src: url('fonts/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/RobotoSlab-Light-webfont.woff') format('woff'),
-         url('fonts/RobotoSlab-Light-webfont.ttf') format('truetype'),
-         url('fonts/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
+    src: url('fonts/RobotoSlabLight.eot');
+    src: url('fonts/RobotoSlabLight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/RobotoSlabLight.woff') format('woff'),
+         url('fonts/RobotoSlabLight.ttf') format('truetype'),
+         url('fonts/RobotoSlabLight.svg#roboto_slablight') format('svg');
     font-weight: normal;
     font-style: normal;
 

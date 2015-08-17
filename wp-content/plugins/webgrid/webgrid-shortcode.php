@@ -7,6 +7,7 @@ function webgrid_out( $atts ) {
 <?php
 	$table = get_option('grid_template');
 	echo "<div id='grid-template' class='frontend'>".$table."</div>";
+	echo "<div class='webgrid-loader'></div>";
 ?>
 
 <script type="text/javascript">
@@ -27,8 +28,10 @@ function webgrid_out( $atts ) {
 				curr.append('<a>' + data + '</a>');
 				$('#grid-template table td img').each(function(){
 					var pId = $(this).data('page');
-					$(this).parent().attr('href', "/<?php bloginfo(); ?>/?p=" + pId);
+					$(this).parent().attr('href', "<?php echo site_url(); ?>/" + pId);
 				});
+				$('#grid-template + .webgrid-loader').hide(0);
+				$('#grid-template').show(0);
  			});
  		});
  	});
@@ -39,7 +42,6 @@ function webgrid_out( $atts ) {
 <?php
 	
 }
-
 add_shortcode( 'webgrid', 'webgrid_out' );
 
 ?>
