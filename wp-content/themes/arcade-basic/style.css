@@ -2303,7 +2303,8 @@ input[type="button"].btn-block {
     opacity: 1; }
 
 .collapse {
-  display: none; }
+  display: block;
+}
   .collapse.in {
     display: block; }
 
@@ -3225,7 +3226,7 @@ input[type="button"].btn-block {
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
       background-color: #333; }
     .navbar-inverse .navbar-toggle .icon-bar {
-      background-color: #fff; }
+      background-color: #00A5A1; }
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-form {
     border-color: #101010; }

@@ -181,6 +181,7 @@ function bavotasan_add_js() {
 	wp_enqueue_script( 'JQuery-ui-js', BAVOTASAN_THEME_URL .'/js/jquery-ui.min.js', array( 'jquery' ), '1.0.0', true );
 
 
+
 	$fittext = ( empty( $bavotasan_theme_options['fittext'] ) ) ? '' : $bavotasan_theme_options['fittext'];
 	$arc_text = ( is_front_page() ) ? $bavotasan_theme_options['arc'] : $bavotasan_theme_options['arc_inner'];
 

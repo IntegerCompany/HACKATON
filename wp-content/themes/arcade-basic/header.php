@@ -18,6 +18,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
+
 	<?php wp_head(); ?>
 </head>
 <?php
@@ -39,9 +40,9 @@ $is_home_page = array_search('home', get_body_class() );
 				<div class="row">
 					<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
 					<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
-
+					<button class="button-mobile"></button>
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> //!!!
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -64,7 +65,10 @@ $is_home_page = array_search('home', get_body_class() );
 					</div>
 				</div>
 				<div class="clearfix"></div>
+
 			</nav><!-- #site-navigation -->
+
+
 
 			 <div class="title-card-wrapper">
                 <div class="title-card">
@@ -112,5 +116,4 @@ $is_home_page = array_search('home', get_body_class() );
 			</div>
 
 		</header>
-
-		<main>
+<main>
