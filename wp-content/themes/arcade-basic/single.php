@@ -11,6 +11,7 @@ get_header();
 	<div class="container">
 		<div class="row">
 			<div id="primary" class="col-md-10 hfeed post-alone" <?php bavotasan_primary_attr(); ?>>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 
