@@ -22,7 +22,7 @@ get_header(); ?>
             while ($loop->have_posts()) : $loop->the_post();
 
             ?>
-            <div class="col-md-4 col-sm-6 block-profile">
+            <div class="col-md-4 col-sm-6 col-xs-6 block-profile">
                 <?php the_post_thumbnail(); ?>
                 <div class="block-profile-inside text-right">
                     <div class="name-staff "><?php the_title(); ?>
