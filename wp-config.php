@@ -15,7 +15,7 @@
  */
 
 /** The name of the database for WordPress */
-define('DB_NAME', 'todo');
+define('DB_NAME', 'hackaton');
 
 /** MySQL database username */
 define('DB_USER', 'root');
