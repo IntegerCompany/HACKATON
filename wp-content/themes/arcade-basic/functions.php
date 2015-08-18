@@ -706,13 +706,14 @@ function register_plugin_styles() {
 // MY FUNCTIONALITY
 
 
-    function load_blogs()
+    function load_blogs($article_id='', $article_per_page=12)
     {
         $args = array(
-            'posts_per_page'   => 12,
+            'posts_per_page'   => $article_per_page,
             'offset'           => 0,
             'category'         => 2,
             'category_name'    => '',
+			'exclude'		   => $article_id,
             'orderby'          => 'date',
             'order'            => 'DESC',
             'post_type'        => 'post',

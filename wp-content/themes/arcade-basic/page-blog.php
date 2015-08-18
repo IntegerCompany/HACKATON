@@ -29,7 +29,7 @@ get_header();
         $date =  $blog->post_date;
         $date_published = new DateTime($date);
         ?>
-            <li class="col-md-4 blog-element" >
+            <li class="col-md-4 col-sm-6 blog-element" >
                 <a href="<?php echo get_permalink($blog->ID); ?>">
                 <div class="img_block">
                     <?php echo get_the_post_thumbnail ( $blog->ID, 'medium', '') ?>
