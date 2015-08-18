@@ -42,6 +42,7 @@ function webgrid_out( $atts ) {
 <?php
 	
 }
+
 add_shortcode( 'webgrid', 'webgrid_out' );
 
 ?>
