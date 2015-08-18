@@ -8,7 +8,7 @@ wp-config.php
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-.idea/workspace.xml
+/.idea/workspace.xml
 .idea/scopes/scope_settings.xml
 wp-content/advanced-cache.php
 wp-content/backup-db/
