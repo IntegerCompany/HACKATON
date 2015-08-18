@@ -54,19 +54,48 @@ $bavotasan_theme_options = bavotasan_theme_options();
 </div>
 </div>
 
-<script>
-	jQuery(function($){
-		// Bind the swipeHandler callback function to the swipe event on div.box
-		$( document ).on( "swipe", swipeHandler );
 
-		// Callback function references the event target and adds the 'swipe' class to it
-		function swipeHandler(  ){
-			$("body").addClass( "swipe" );
-			alert("swipe");
-		}
-	});
-</script>
 
 <?php wp_footer(); ?>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+	(function($){
+		var $colapse = $(".collapse"),
+			$colapseMenu = $('.collapse > .logo-head > ul'),
+			leftPos,
+			DELAY = 500;
+
+		$( document ).on( "swipe", openMenu );
+		$("button").on("click",openMenu );
+
+		function openMenu(){
+			$colapse.toggleClass('open');
+			leftPos = $colapse.hasClass('open') ? '0%' : '-100%';
+			$colapseMenu.animate({'left': leftPos}, DELAY);
+		}
+
+
+		$(".navbar-toggle").on("click",openMiddleMenu);
+		function openMiddleMenu(){
+
+//			var displayPos;
+//					$colapse.toggleClass('open-middle-menu');
+//					displayPos = $colapse.hasClass('open-middle-menu')? 'block':'none';
+					$colapse.slideToggle("700");
+
+			//console.log('displayPos = ' + displayPos);
+
+
+//			if($colapseMenu.css("display", "none")){
+//				$colapseMenu.css("display", "block");
+//			}else{
+//				$colapseMenu.css("display", "block");
+//			}
+		}
+
+	})(window.jQuery);
+
+	jQuery(function($){});
+</script>
 </body>
 </html>

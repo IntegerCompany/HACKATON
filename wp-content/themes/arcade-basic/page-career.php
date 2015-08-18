@@ -6,12 +6,20 @@
 get_header();?>
 
 <div class="container page-carier">
-	<div class="container">
+	<div class="container-fluid video-text">
 		<div class="row">
 			<h2 class="text-center"><?php the_title();?></h2>
 			<div class="container">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-8 "> <!--col-md-offset-2-->
 					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-4">
+					<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+						Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній
+						підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні,
+						залишаючись по суті незмінною. Вона популяризувалась в 60-ихроках минулого сторіччя завдяки виданню зразків шрифтів Letraset,
+						які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker,
+						які використовували різні версії Lorem Ipsum.</p>
 				</div>
 			</div>
 		</div>
@@ -40,7 +48,7 @@ get_header();?>
 	<div class="row recruiters">
 		<h2 class="text-center">Let's meet!</h2>
 		<div class="col-md-4 text-center rec_grid">
-			<p class="rec_img"><img class="img-responsive " src="<?php echo get_template_directory_uri(); ?>/img/Max_Vitruk.jpg" alt=""/></p>
+			<p class="rec_img"><img class="img-responsive " src="<?php echo get_template_directory_uri(); ?>/img/Max_Vitruk.png" alt=""/></p>
 			<p>Max Vitruk</p>
 			<span>Android developer</span>
 			<p>
@@ -56,7 +64,7 @@ get_header();?>
 			</p>
 		</div>
 		<div class="col-md-4 text-center rec_grid">
-			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Petro Tsymbalistiy.jpg" alt=""/></p>
+			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Petro Tsymbalistiy.png" alt=""/></p>
 			<p>Petro Tsymbalistiy</p>
 			<span>Project Manager</span>
 			<p>
@@ -72,7 +80,7 @@ get_header();?>
 			</p>
 		</div>
 		<div class="col-md-4 text-center rec_grid">
-			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Bogdan Maksymchuk.jpg" alt=""/></p>
+			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Bogdan Maksymchuk.png" alt=""/></p>
 			<p>Bogdan Maksymchuk</p>
 			<span>Team lead</span>
 			<p>

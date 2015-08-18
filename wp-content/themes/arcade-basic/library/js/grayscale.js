@@ -7,13 +7,16 @@
 (function($){
 
     // jQuery to collapse the navbar on scroll
-    $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-    });
+    var topNavClass = "top-nav-collapse",
+        $navFixed = $(".navbar-fixed-top");
+
+    function setNavBackgound(){
+        $(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
+    }
+
+    $(document).ready(function() { setNavBackgound(); });
+    $(window).load(function() { setNavBackgound(); });
+    $(window).scroll(function() { setNavBackgound(); });
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(function() {

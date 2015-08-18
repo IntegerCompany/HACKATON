@@ -180,7 +180,6 @@ function bavotasan_add_js() {
 	wp_enqueue_script( 'JQuery', BAVOTASAN_THEME_URL .'/js/jquery.mobile.custom.min.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_script( 'JQuery-ui-js', BAVOTASAN_THEME_URL .'/js/jquery-ui.min.js', array( 'jquery' ), '1.0.0', true );
 
-
 	$fittext = ( empty( $bavotasan_theme_options['fittext'] ) ) ? '' : $bavotasan_theme_options['fittext'];
 	$arc_text = ( is_front_page() ) ? $bavotasan_theme_options['arc'] : $bavotasan_theme_options['arc_inner'];
 
@@ -705,13 +704,14 @@ function register_plugin_styles() {
 // MY FUNCTIONALITY
 
 
-    function load_blogs()
+    function load_blogs($article_id='', $article_per_page=12)
     {
         $args = array(
-            'posts_per_page'   => 12,
+            'posts_per_page'   => $article_per_page,
             'offset'           => 0,
             'category'         => 2,
             'category_name'    => '',
+			'exclude'		   => $article_id,
             'orderby'          => 'date',
             'order'            => 'DESC',
             'post_type'        => 'post',
