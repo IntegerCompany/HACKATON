@@ -3,8 +3,13 @@
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
-.idea/
-idea/
+.idea/encodings.xml
+.idea/HACKATON.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/scopes/scope_settings.xml
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
