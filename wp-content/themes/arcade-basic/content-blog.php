@@ -4,9 +4,11 @@
  *
  * @since 1.0.0
  */
-?>
 
 //dfhdfghd
+//sdfg/
+?>
+
 <div id="single-blog-page" class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -14,6 +16,7 @@
 				<figure>
 					<h1><?php the_title(); ?></h1>
 					<?php echo get_the_post_thumbnail ( get_the_ID(), array('350','350'), '') ?>
+					<hr/>
 					<figcaption><?php the_content(); ?></figcaption>
 				</figure>
 			</article>
