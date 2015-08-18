@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the footer.
- *
+
  * Contains footer content and the closing of the main and #page div elements.
  */
 $bavotasan_theme_options = bavotasan_theme_options();
@@ -9,6 +9,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 	</main><!-- main -->
 
 	<footer id="footer" role="contentinfo">
+		<a href="mailto:kryvun.roman@gmail.com" id="write-us-mob" target="_blank" style="position: relative;">write us</a>
 		<div id="footer-content" class="container">
 			<div class="row">
 				<div class="copyright col-lg-12">
@@ -50,6 +51,21 @@ $bavotasan_theme_options = bavotasan_theme_options();
 		</div><!-- #footer-content.container -->
 	</footer><!-- #footer -->
 </div><!-- #page -->
+</div>
+</div>
+
+<script>
+	jQuery(function($){
+		// Bind the swipeHandler callback function to the swipe event on div.box
+		$( document ).on( "swipe", swipeHandler );
+
+		// Callback function references the event target and adds the 'swipe' class to it
+		function swipeHandler(  ){
+			$("body").addClass( "swipe" );
+			alert("swipe");
+		}
+	});
+</script>
 
 <?php wp_footer(); ?>
 </body>

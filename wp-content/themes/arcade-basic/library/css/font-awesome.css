@@ -11,6 +11,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: font-helveticaneuecyr-light; /* Имя шрифта */
+  src: url(../fonts/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+}
+.font-helvetic-light{
+  font-family: font-helveticaneuecyr-light;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;

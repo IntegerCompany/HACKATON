@@ -1,11 +1,31 @@
 /**
- * CSS3 social icon hover effect
+
  * Read more on my blog: http://webbb.be/blog/
  */
 
-
+body{
+	background:#424348;
+	color:#fff;
+}
+body.basic, .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6{
+	font-family: "RobotoSlab Light";
+}
+.page-carier,
+.page-carier h2{
+	color: #fff;
+}
+a.logo-integer {
+	display: block;
+	margin-bottom: -35px;
+}
+h2, p, a, span{color:#fff;}
  i,i:visited { color: #fff; }
  i:hover { color: #fff; }
+
+ .rec_grid a:hover
+ {
+	 text-decoration: none;
+ }
 
 .social {
 	float: left;
@@ -15,8 +35,7 @@
 	height: 80px;
 	display: block; text-align: center; 
 	line-height:70px;
-	 color: #fff;
-	
+	color: #fff;
 	position: relative;
 	transform:rotateY(0deg);
 	transition:transform .25s ease-out;
@@ -50,6 +69,7 @@
 	Youtube #FF3333
 	Dribbble #ea4c89
 */
+
 .social >.back { background: #00a5a1; }
 .social.social-skype > .back { background: #00a5a1; }
 .social.social-linkedin > .back { background: #00a5a1; }
@@ -66,11 +86,18 @@
 }
 #lang-switch ul li{
 	display:inline-block;
+	border-right: 1px solid #fff;
+	padding-right: 3px;
+	line-height: 1em;
 }
 #lang-switch ul li a:hover{
 	text-decoration: none;
 	color: #ffffff;
 }
+#lang-switch li:last-child {
+	border-right: none;
+}
+
 #lang-switch{
 	float: left;
 	text-decoration: none;
@@ -97,7 +124,7 @@
 		line-height: 4em;
 	}
 	.pull-right {
-		width: 100%;
+		/*width: 100%;*/
 		text-align: center;
 	}
 	.social {
@@ -105,3 +132,127 @@
 		display: inline-block;
 	}
 }
+.recruiters img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.rec_img{overflow: hidden;}
+.rec_grid img {
+	max-width: none;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.rec:hover{
+	color:#67beb6;
+	text-decoration: none;
+	text-align: none;
+}
+.rec{
+	padding: 0 7px;
+}
+.rec_grid img:hover {
+	/*opacity: 0.4;*/
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+	transform: scale3d(1.1, 1.1, 1);
+}
+.pos-div{
+	/*background-color: #a5a6aa;*/
+	background:url('../img/pos-div.png');
+	margin:18px;
+	width: 30%;
+	height: 85px;
+	color:#fff;
+}
+.pos-div {
+	position:relative;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.pos-div:before, .pos-div:after {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	top:10px;
+	bottom:10px;
+	left:0;
+	right:0;
+	-moz-border-radius:100px / 10px;
+	border-radius:100px / 10px;
+}
+.pos-div:after {
+	right:10px;
+	left:auto;
+	-webkit-transform:skew(8deg) rotate(3deg);
+	-moz-transform:skew(8deg) rotate(3deg);
+	-ms-transform:skew(8deg) rotate(3deg);
+	-o-transform:skew(8deg) rotate(3deg);
+	transform:skew(8deg) rotate(3deg);
+}
+.pos-div img{
+	vertical-align: top;
+	float: right;
+
+}
+.pos-div h3{
+	display: inline-block;
+	max-width: 70%;
+	vertical-align: middle;
+	color:#fff;
+}
+
+.pos-div:hover{
+	background:#67beb6 ;
+}
+.career-pos-color:hover{
+	background-color:#67beb6 ;
+}
+
+.video-career{
+	margin: 15px 0 30px 0;
+}
+.page-carier h2{
+	margin: 50px 0 20px 0;
+}
+.job-icon{
+	float:right;
+	font-size: 3em;
+}
+
+
+@media (max-width: 992px){
+	.media-row{
+		margin: 0;
+	}
+	.pos-div{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pos-div h3 {
+		font-size: 1.3em;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.pos-div{
+		width: 45%;
+	}
+}
+
+/*@media (max-width: 480px) {*/
+	/*#menu-menu-1{float: none;}*/
+	/*.navbar-collapse {*/
+		/*background-color: black;*/
+		/*text-align: left;*/
+		/*top: 0;*/
+		/*position: fixed;*/
+		/*height: 80%;*/
+		/*width: 100%;*/
+	/*}*/
+/*}*/

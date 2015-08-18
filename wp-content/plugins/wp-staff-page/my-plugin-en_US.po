@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Staff page v1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-08-13 14:40:15+0000\n"
+"Last-Translator: admin <mov4ko.y@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: staff-post-template.php:43
+#@ staffPagePlugin
+msgid "Our_Office"
+msgstr "Our_Office"
+
+#: staffpageinit.php:228
+#@ staffPagePlugin
+msgid "Staff position"
+msgstr "Staff position"
+
+#: staffpageinit.php:234
+#@ staffPagePlugin
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: staffpageinit.php:240
+#@ staffPagePlugin
+msgid "Facebook"
+msgstr "Facebook"
+
+#: staffpageinit.php:246
+#@ staffPagePlugin
+msgid "Google+"
+msgstr "Google+"
+
+#: staffpageinit.php:176
+#: staffpageinit.php:177
+#@ staffPagePlugin
+msgid "Staff Post"
+msgstr "Staff Post"
+
+#: staffpageinit.php:178
+#@ staffPagePlugin
+msgid "Add new"
+msgstr "Add new"
+
+#: staffpageinit.php:179
+#@ staffPagePlugin
+msgid "Add new staff post"
+msgstr "Add new staff post"
+
+#: staffpageinit.php:180
+#@ staffPagePlugin
+msgid "Edit"
+msgstr "Edit"
+
+#: staffpageinit.php:181
+#@ staffPagePlugin
+msgid "Edit staff post"
+msgstr "Edit staff post"
+
+#: staffpageinit.php:182
+#@ staffPagePlugin
+msgid "New staff post"
+msgstr "New staff post"
+
+#: staffpageinit.php:183
+#@ staffPagePlugin
+msgid "View"
+msgstr "View"
+
+#: staffpageinit.php:184
+#@ staffPagePlugin
+msgid "View staff post"
+msgstr "View staff post"
+
+#: staffpageinit.php:185
+#@ staffPagePlugin
+msgid "Search staff post"
+msgstr "Search staff post"
+
+#: staffpageinit.php:186
+#@ staffPagePlugin
+msgid "No staff post found"
+msgstr "No staff post found"
+
+#: staffpageinit.php:188
+#@ staffPagePlugin
+msgid "No staff post found in trash"
+msgstr "No staff post found in trash"
+
+#: staffpageinit.php:189
+#@ staffPagePlugin
+msgid "Parent staff post"
+msgstr "Parent staff post"
+
+#: staffpageinit.php:209
+#@ staffPagePlugin
+msgid "Additional staff information"
+msgstr "Additional staff information"
+

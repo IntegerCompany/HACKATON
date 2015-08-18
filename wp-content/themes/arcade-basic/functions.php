@@ -13,6 +13,8 @@ define( 'BAVOTASAN_THEME_FILE', get_option( 'template' ) );
 
 define("TEXTDOMAIN", "integer");
 
+add_filter('show_admin_bar', '__return_false');
+
 /**
  * Includes
  *
@@ -175,6 +177,9 @@ function bavotasan_add_js() {
 	wp_enqueue_script( 'fillsize', BAVOTASAN_THEME_URL .'/library/js/fillsize.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'arctext', BAVOTASAN_THEME_URL .'/library/js/jquery.arctext.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'theme_js', BAVOTASAN_THEME_URL .'/library/js/theme.js', array( 'bootstrap' ), '', true );
+	wp_enqueue_script( 'JQuery', BAVOTASAN_THEME_URL .'/js/jquery.mobile.custom.min.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'JQuery-ui-js', BAVOTASAN_THEME_URL .'/js/jquery-ui.min.js', array( 'jquery' ), '1.0.0', true );
+
 
 	$fittext = ( empty( $bavotasan_theme_options['fittext'] ) ) ? '' : $bavotasan_theme_options['fittext'];
 	$arc_text = ( is_front_page() ) ? $bavotasan_theme_options['arc'] : $bavotasan_theme_options['arc_inner'];
@@ -184,10 +189,12 @@ function bavotasan_add_js() {
 		'fittext' => esc_attr( $fittext ),
 	) );
 
+	wp_enqueue_style( 'bootstrap', BAVOTASAN_THEME_URL .'/library/css/bootstrap.min.css', false, '4.3.1', 'all' );
+
+
 	wp_enqueue_style( 'theme_stylesheet', get_stylesheet_uri() );
 	wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Megrim|Raleway|Open+Sans:400,400italic,700,700italic', false, null, 'all' );
-	wp_enqueue_style( 'font_awesome', BAVOTASAN_THEME_URL .'/library/css/font-awesome.css', false, '4.3.0', 'all' );
-}
+	wp_enqueue_style( 'font_awesome', BAVOTASAN_THEME_URL .'/library/css/font-awesome.css', false, '4.3.0', 'all' );}
 endif; // bavotasan_add_js
 
 add_action( 'widgets_init', 'bavotasan_widgets_init' );
@@ -690,3 +697,68 @@ function register_plugin_styles() {
 	wp_register_style( 'hellen-style', get_template_directory_uri(). '/css/style-hellen.css' );
 	wp_enqueue_style( 'hellen-style' );
 }
+
+
+
+
+
+// MY FUNCTIONALITY
+
+
+    function load_blogs($article_id='', $article_per_page=12)
+    {
+        $args = array(
+            'posts_per_page'   => $article_per_page,
+            'offset'           => 0,
+            'category'         => 2,
+            'category_name'    => '',
+			'exclude'		   => $article_id,
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'post',
+            'post_status'      => 'publish',
+            'suppress_filters' => true
+        );
+        return get_posts( $args );
+    }
+
+
+function more_blogs()
+{
+    $args = array(
+        'posts_per_page'   => 12,
+        'offset'           => $_POST['offset'],
+        'category'         => 2,
+        'category_name'    => '',
+        'orderby'          => 'date',
+        'order'            => 'DESC',
+        'post_type'        => 'post',
+        'post_status'      => 'publish',
+        'suppress_filters' => true
+    );
+    $blogs = get_posts( $args );
+
+    foreach ($blogs as $blog)
+    {
+        $date = explode(' ', $blog->post_date);
+        $date = explode('-', $date[0]);
+        ?>
+        <li class="col-md-4 blog-element" >
+            <a href="<?php echo get_permalink($blog->ID); ?>">
+                <div class="img_block">
+                    <?php echo get_the_post_thumbnail ( $blog->ID, 'medium', '') ?>
+                </div>
+                <div class="title_block clearfix">
+                    <h3><?php echo $blog->post_title; ?></h3>
+                    <div class="publ_date"><i class="fa fa-calendar"></i>  <?php echo date('jS \of F Y', mktime(0,0,0,$date[2], $date[1], $date[0])); ?></div>
+                    <div class="publ_author"><?php echo __('by', TEXTDOMAIN).' '.get_the_author_meta('user_nicename', (int)$blog->post_author);//.$author_post_nam.' '.$author_post_lName; ?></div>
+                </div>
+            </a>
+        </li>
+    <?php
+    }
+
+    die();
+}
+add_action( 'wp_ajax_nopriv_more_blogs', 'more_blogs' );
+add_action( 'wp_ajax_more_blogs', 'more_blogs' );
