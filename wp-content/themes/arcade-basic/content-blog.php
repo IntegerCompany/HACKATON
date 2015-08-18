@@ -6,8 +6,7 @@
  */
 ?>
 
-<h1>dfivbskjdbknvjdfnvs</h1>
-
+//dfhdfghd
 <div id="single-blog-page" class="container">
 	<div class="row">
 		<div class="col-md-12">
