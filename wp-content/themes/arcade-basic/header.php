@@ -116,4 +116,4 @@ $is_home_page = array_search('home', get_body_class() );
 			</div>
 
 		</header>
-<main>
+<main class="shadow">
