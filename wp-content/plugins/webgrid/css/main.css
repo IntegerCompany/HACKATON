@@ -17,7 +17,8 @@
 #grid-template.frontend table {
 	max-width: 100%;
 	border-collapse: separate;
-	border-spacing: 10px; 
+	border-spacing: 10px;
+	background-color: inherit;
 }
 #grid-template.frontend table td{
 	max-height: calc(100vw / 4);
@@ -51,7 +52,7 @@
 }
 #grid-template.frontend table td .dark {
 	background-color: rgba(25,25,25,.5);
-	color: white;
+	color: #ffffff;
     position: absolute;
     top: 0;
     height: 100%;
@@ -80,7 +81,7 @@
 }
 #grid-template.frontend table td .dark > h3 {
 	margin: 0;
-	color: white;
+	color: #ffffff;
 	padding: 0 10%;
     text-align: center;
 }
