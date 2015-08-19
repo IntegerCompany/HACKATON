@@ -15,7 +15,9 @@ body.basic, .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6{
 	-moz-box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
 	box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
 }
-
+button.button-mobile {
+	display: none;
+}
 a.logo-integer {
 	display: block;
 	margin-bottom: -35px;
@@ -254,13 +256,12 @@ h2, p, a, span{color:#fff;}
 	}
 }
 
-
 @media (max-width: 480px) {
 	.navbar-header {
 		display: none;
 	}
-	.button-mobile {
-		display: block;
+	button.button-mobile {
+		display: block!important;
 		background: none;
 		border: none;
 	}
