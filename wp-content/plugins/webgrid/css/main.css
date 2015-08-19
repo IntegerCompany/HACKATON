@@ -6,7 +6,6 @@
     margin: 0 auto;
 }
 #grid-template.frontend{
-	padding: 0 5%;
 	display: none;
 }
 #grid-template.frontend td {
@@ -17,38 +16,9 @@
 #grid-template.frontend table {
 	max-width: 100%;
 	border-collapse: separate;
-	border-spacing: 10px;
+	border-spacing: 2px;
 	background-color: inherit;
-}
-#grid-template.frontend table td{
-	max-height: calc(100vw / 4);
-	max-height: -webkit-calc(100vw / 4);
-}
-#grid-template.frontend table td img {
-	max-height: calc(100vw / 4);
-	max-height: -webkit-calc(100vw / 4);
-	width: 100%;
-}
-#grid-template.frontend table td[colspan="2"] img {
-	
-}
-#grid-template.frontend table td[colspan="3"] img {
-	
-}
-#grid-template.frontend table td[colspan="4"] img {
-	
-}
-#grid-template.frontend table td[rowspan="2"] img {
-	max-height: calc(100vw / 2);
-	max-height: -webkit-calc(100vw / 2);
-}
-#grid-template.frontend table td[rowspan="3"] img {
-	max-height: calc( (100vw / 2) + (100vw / 4) );
-	max-height: -webkit-calc( (100vw / 2) + (100vw / 4 ) );
-}
-#grid-template.frontend table td[rowspan="4"] img {
-	max-height: calc( 100vw );
-	max-height: -webkit-calc( 100vw );
+	margin-bottom: 15px;
 }
 #grid-template.frontend table td .dark {
 	background-color: rgba(25,25,25,.5);
