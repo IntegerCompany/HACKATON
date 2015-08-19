@@ -8,45 +8,45 @@ get_header();
 ?>
 
 
-<div class="container">
+<div id="blog-page" class="container">
     <div class="row">
-        <h1><?php the_title(); ?></h1>
+        <div class="col-md-12">
+            <h1><?php the_title(); ?></h1>
+            <hr/>
+            <?php /* ?><div class="breadcrumb">Home -> Blog  //TODO</div><?php //*/ ?>
 
-        <div class="breadcrumb">Home -> Blog  //TODO</div>
+            <div class="blog_grid clearfix">
+        <?php $blogs = load_blogs(); ?>
+                <ul>
+                <?php
 
-        <div class="blog_grid clearfix">
-    <?php
-        $blogs = load_blogs();
-?>
-            <ul>
+                $date_format = 'jS \of F Y';
+
+        foreach ($blogs as $blog)
+        {
+
+            $date =  $blog->post_date;
+            $date_published = new DateTime($date);
+            ?>
+                <li class="col-md-4 col-sm-6 blog-element" >
+                    <a href="<?php echo get_permalink($blog->ID); ?>">
+                    <div class="img_block">
+                        <?php echo get_the_post_thumbnail ( $blog->ID, 'medium', '') ?>
+                    </div>
+                    <div class="title_block clearfix">
+                        <h3><?php echo $blog->post_title; ?></h3>
+                        <div class="publ_date"><i class="fa fa-calendar"></i>  <?php echo $date_published->format( $date_format ); ?></div>
+                        <div class="publ_author"><?php echo __('by', TEXTDOMAIN).' '.get_the_author_meta('user_nicename', (int)$blog->post_author);//.$author_post_nam.' '.$author_post_lName; ?></div>
+                    </div>
+                    </a>
+                </li>
             <?php
+        }
 
-            $date_format = 'jS \of F Y';
-
-    foreach ($blogs as $blog)
-    {
-
-        $date =  $blog->post_date;
-        $date_published = new DateTime($date);
         ?>
-            <li class="col-md-4 col-sm-6 blog-element" >
-                <a href="<?php echo get_permalink($blog->ID); ?>">
-                <div class="img_block">
-                    <?php echo get_the_post_thumbnail ( $blog->ID, 'medium', '') ?>
-                </div>
-                <div class="title_block clearfix">
-                    <h3><?php echo $blog->post_title; ?></h3>
-                    <div class="publ_date"><i class="fa fa-calendar"></i>  <?php echo $date_published->format( $date_format ); ?></div>
-                    <div class="publ_author"><?php echo __('by', TEXTDOMAIN).' '.get_the_author_meta('user_nicename', (int)$blog->post_author);//.$author_post_nam.' '.$author_post_lName; ?></div>
-                </div>
-                </a>
-            </li>
-        <?php
-    }
+                </ul>
 
-    ?>
-            </ul>
-
+            </div>
         </div>
     </div>
 </div>

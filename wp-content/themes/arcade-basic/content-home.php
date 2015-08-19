@@ -30,6 +30,8 @@ $homeContent = get_post($pageID, 'ARRAY_A');
     }
     #cotact-info{
         padding-top: 50px;
+        margin-left: -20px;
+        margin-right: -20px;
     }
 </style>
 
