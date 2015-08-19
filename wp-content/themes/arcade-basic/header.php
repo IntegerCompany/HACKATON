@@ -49,15 +49,7 @@ $is_home_page = array_search('home', get_body_class() );
 							<span class="icon-bar"></span>
 						</button>
 					</div>
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				    </button>
-				</div>
-
+				<div class="collapse navbar-collapse">
 						<div class="logo-head container"><?php
 								wp_reset_query();
 								query_posts('page_id=41');
