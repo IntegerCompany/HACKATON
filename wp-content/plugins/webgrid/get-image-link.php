@@ -13,9 +13,9 @@
 	$currentPost = get_post($postid[$_POST['count']]);
 ?>
 
-<img 
+<img
 	src="http://localhost/HACKATON/wp-content/uploads/greed/<?php echo get_option('thumb-'.$_POST['count']); ?>"
-	data-page="<?php echo $currentPost->post_name; ?>" 
+	data-page="<?php echo $currentPost->post_name; ?>"
 />
 <span class="dark">
 	<h3><?php echo $currentPost->post_title; ?></h3>

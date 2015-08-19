@@ -246,7 +246,6 @@ h2, p, a, span{color:#fff;}
 	.video-text  .col-md-8{
 		display: none;
 	}
-
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 	.pos-div{
@@ -254,6 +253,7 @@ h2, p, a, span{color:#fff;}
 		/*45%*/
 	}
 }
+
 
 @media (max-width: 480px) {
 	.navbar-header {

@@ -3,7 +3,6 @@
 function webgrid_out( $atts ) {
 
 ?>
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <?php
 	$table = get_option('grid_template');
 	echo "<div id='grid-template' class='frontend'>".$table."</div>";
@@ -42,6 +41,7 @@ function webgrid_out( $atts ) {
 <?php
 	
 }
+
 add_shortcode( 'webgrid', 'webgrid_out' );
 
 ?>

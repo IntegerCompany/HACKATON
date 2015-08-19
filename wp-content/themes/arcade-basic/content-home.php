@@ -19,7 +19,7 @@ $homeContent = get_post($pageID, 'ARRAY_A');
         background-color: #0f0f0f;
     }
     #home-description {
-        padding: 80px 0 50px;
+        padding: 80px 0 0;
     }
     #home-description h1 {
         font-weight: bold;
@@ -27,6 +27,9 @@ $homeContent = get_post($pageID, 'ARRAY_A');
     .home #header .title-card-wrapper{
         background-color: rgba(0, 0, 0, 0.3);
         box-shadow: inset 0px -50px 150px 0px rgb(8, 8, 8);
+    }
+    #cotact-info{
+        padding-top: 50px;
     }
 </style>
 
@@ -49,7 +52,7 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 
 <!-- Map Section -->
 
-<div class="container-fluid">
+<div id="cotact-info" class="container-fluid">
     <div id="map" style="height: 500px;"></div>
 </div>
 

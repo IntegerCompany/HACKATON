@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link href="<?php echo BAVOTASAN_THEME_URL; ?>/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 
 	<?php wp_head(); ?>
@@ -49,7 +50,13 @@ $is_home_page = array_search('home', get_body_class() );
 						</button>
 					</div>
 
-					<div class="collapse navbar-collapse">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+				</div>
 
 						<div class="logo-head container"><?php
 								wp_reset_query();
