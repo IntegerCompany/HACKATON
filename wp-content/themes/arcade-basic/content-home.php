@@ -10,42 +10,13 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 
 ?>
 
-<style>
-    .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6,
-    body.basic {
-        color: #EEEEEE;
-    }
-    main {
-        background-color: #0f0f0f;
-    }
-    #home-description {
-        padding: 80px 0 0;
-    }
-    #home-description h1 {
-        font-weight: bold;
-    }
-    .home #header .title-card-wrapper{
-        background-color: rgba(0, 0, 0, 0.3);
-        box-shadow: inset 0px -50px 150px 0px rgb(8, 8, 8);
-    }
-    #cotact-info{
-        padding-top: 50px;
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-</style>
-
 <div id="home-description" class="container">
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-6">
-                    <?php echo get_the_post_thumbnail( $pageID, 'large'); ?>
-                </div>
-                <div class="col-md-6">
-                    <h1><?php echo $homeContent['post_title']; ?></h1>
-                    <h2><?php echo $homeContent['post_content']; ?></h2>
-                </div>
+                <?php echo get_the_post_thumbnail( $pageID, 'large'); ?>
+                <h1><?php echo $homeContent['post_title']; ?></h1>
+                <h2><?php echo $homeContent['post_content']; ?></h2>
             </div>
         </div>
     </div>

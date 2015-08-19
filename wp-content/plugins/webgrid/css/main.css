@@ -3,7 +3,7 @@
     width: 62px;
     background-size: cover;
     background: url(../img/webgrid-loader.gif);
-    margin: 0 auto;
+    margin: 20px auto;
 }
 #grid-template.frontend{
 	display: none;

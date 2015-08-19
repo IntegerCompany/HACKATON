@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link href="<?php echo BAVOTASAN_THEME_URL; ?>/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="<?php echo BAVOTASAN_THEME_URL; ?>/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
 	<!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 
 	<?php wp_head(); ?>
