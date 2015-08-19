@@ -43,6 +43,7 @@
 					<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
 					<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
 					<button class="button-mobile"></button>
+					<div class="navbar-mobile"></div>
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="icon-bar"></span>

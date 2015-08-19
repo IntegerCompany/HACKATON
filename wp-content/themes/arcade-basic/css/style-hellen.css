@@ -26,16 +26,16 @@ h2, p, a, span{color:#fff;}
  i,i:visited { color: #fff; }
  i:hover { color: #fff; }
 
- .video-text{
+.page-carier .video-text{
 	 margin-right: 15px;
 	 padding-right: 15px;
 	 padding-left: 0;
 	 margin-left: 0;
  }
-.video-text  .col-md-8, .col-md-4{
+.remove-padding{
 	padding-left:0;
 }
-.video-text  .col-md-4{
+.add-padding-right{
 	padding-right: 0;
 	padding-left: 20px;
 }
@@ -260,6 +260,15 @@ h2, p, a, span{color:#fff;}
 	.navbar-header {
 		display: none;
 	}
+	.navbar-mobile{
+		background: rgba(0, 0, 0, 0.6);
+		width: 100%;
+		height: 50px;
+		top: 0;
+		position: fixed;
+		left: 0;
+
+	}
 	button.button-mobile {
 		display: block!important;
 		background: none;
@@ -318,10 +327,10 @@ h2, p, a, span{color:#fff;}
 	 }
 	.navbar-header {
 		margin-right: 15px;
+		background: rgba(0, 0, 0, 0.6);
 	}
 	.navbar-collapse.open.collapse.in{
 		background-color: rgba(12, 122, 122, 0.7);
-		height: 230px;
 	}
 	.navbar-inverse .navbar-nav > li > a:hover{    color: #A6BBBA;}
 	.col-md-6 .video-career{
