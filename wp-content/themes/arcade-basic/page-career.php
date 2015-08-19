@@ -13,9 +13,9 @@ get_header();?>
 				<div class="col-md-6 remove-padding "> <!--col-md-offset-2-->
 					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="col-md-6 remove-padding add-padding-right">
+				<article class="col-md-6 remove-padding add-padding-right">
 					<?php the_content(); ?>
-				</div>
+				</article>
 			</div>
 		</div>
 	</div>

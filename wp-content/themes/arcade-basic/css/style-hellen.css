@@ -10,6 +10,11 @@ body.basic, .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6{
 .page-carier h2{
 	color: #fff;
 }
+.page-carier article{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-bottom: none;
+}
 .shadow {
 	-webkit-box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
 	-moz-box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
