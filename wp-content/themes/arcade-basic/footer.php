@@ -93,7 +93,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 //			}
 		}
 		$(".logo-head a").click(function(event){
-			$("#menu-menu-1").css("display", "none");
+			$("#menu-menu-1").css("left", "-100%");
 		});
 
 	})(window.jQuery);
