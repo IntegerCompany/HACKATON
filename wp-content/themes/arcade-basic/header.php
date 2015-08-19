@@ -23,10 +23,10 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-$bavotasan_theme_options = bavotasan_theme_options();
-$space_class = '';
+	$bavotasan_theme_options = bavotasan_theme_options();
+	$space_class = '';
 
-$is_home_page = array_search('home', get_body_class() );
+	$is_home_page = array_search('home', get_body_class() );
 ?>
 
 <body <?php body_class(); ?>>
@@ -34,7 +34,8 @@ $is_home_page = array_search('home', get_body_class() );
 
 	<div id="page" class="container-fluid mar-pad">
 		<div class="row">
-			<div>
+			<div class="col-lg-12">
+
 
 		<header id="header">
 			<nav id="site-navigation" class="navbar navbar-inverse navbar-fixed-top navbar-transparent" role="navigation">
