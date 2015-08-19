@@ -10,10 +10,10 @@ get_header();?>
 		<div class="row">
 			<h2 class="text-center"><?php the_title();?></h2>
 			<div class="container">
-				<div class="col-md-6 "> <!--col-md-offset-2-->
+				<div class="col-md-6 remove-padding "> <!--col-md-offset-2-->
 					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 remove-padding add-padding-right">
 					<?php the_content(); ?>
 				</div>
 			</div>
