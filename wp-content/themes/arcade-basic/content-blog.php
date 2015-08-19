@@ -16,8 +16,8 @@
 			<article class="col-md-9">
 				<figure>
 					<h1><?php the_title(); ?></h1>
-					<?php echo get_the_post_thumbnail ( get_the_ID(), array('350','350'), '') ?>
 					<hr/>
+					<?php echo get_the_post_thumbnail ( get_the_ID(), array('350','350'), '') ?>
 					<figcaption><?php the_content(); ?></figcaption>
 				</figure>
 			</article>

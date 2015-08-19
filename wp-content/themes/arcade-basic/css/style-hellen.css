@@ -163,7 +163,7 @@ h2, p, a, span{color:#fff;}
 /*}*/
 .pos-div{
 	/*background-color: #a5a6aa;*/
-	background:url('../img/pos-div.png');
+	background:url('../img/pos-div.jpg');
 	margin:18px;
 	width: 30%;
 	height: 85px;
@@ -175,13 +175,14 @@ h2, p, a, span{color:#fff;}
 	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.pos-div:before, .pos-div:after {
+.pos-div:before,
+.pos-div:after {
 	content:"";
 	position:absolute;
 	z-index:-1;
-	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	/*-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);*/
+	/*-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);*/
+	/*box-shadow:0 0 20px rgba(0,0,0,0.8);*/
 	top:10px;
 	bottom:10px;
 	left:0;
