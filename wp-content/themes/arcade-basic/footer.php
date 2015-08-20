@@ -79,9 +79,18 @@ $bavotasan_theme_options = bavotasan_theme_options();
 		function openMiddleMenu(){
 
 //			var displayPos;
-//					$colapse.toggleClass('open-middle-menu');
+					//$colapse.toggleClass('open-middle-menu');
 //					displayPos = $colapse.hasClass('open-middle-menu')? 'block':'none';
-					$colapse.slideToggle("700");
+
+			//$colapse.slideToggle("600");
+
+			if ($('$colapse').is(":hidden")) {
+				$('$colapse').slideDown("slow");
+			} else {
+				$('$colapse').slideUp("slow");
+			}
+
+
 
 			//console.log('displayPos = ' + displayPos);
 

@@ -7,6 +7,11 @@ body{
 .page-carier h2{
 	color: #fff;
 }
+.page-carier article{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-bottom: none;
+}
 .shadow {
 	-webkit-box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
 	-moz-box-shadow: inset 5px -9px 150px 20px rgba(0,0,0,0.77);
@@ -130,16 +135,12 @@ h2, p, a, span{color:#fff;}
 .pull-right {
 	margin-right: 20px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	.pull-center {
-		width: 20%;
-	}
-}
-.recruiters img{
+.rec_img{
 	width: 200px;
 	height: 200px;
-	margin: 0 auto;
+	margin: 30px auto;
 }
+
 /*.rec_img{overflow: hidden;}*/
 /*.rec_grid img {*/
 	/*max-width: none;*/
@@ -230,7 +231,14 @@ h2, p, a, span{color:#fff;}
 	float:right;
 	font-size: 3em;
 }
-
+section.row.recruiters {
+	margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.pull-center {
+		width: 20%;
+	}
+}
 @media (max-width: 992px){
 	.media-row{
 		margin: 0;
@@ -292,7 +300,9 @@ h2, p, a, span{color:#fff;}
 	}
 	.navbar-nav {
 		 margin: 0px;
-		width: 100%;
+		/*width: 100%;*/
+		left:0;
+		right: 0;
 		background: #050B0E;
 		position: fixed;
 		height: 100%;
@@ -327,10 +337,14 @@ h2, p, a, span{color:#fff;}
 		margin-right: 15px;
 		background: rgba(0, 0, 0, 0.6);
 	}
-	.navbar-collapse.open.collapse.in{
-		background-color: rgba(12, 122, 122, 0.7);
+	.logo-head.container {
+		background-color: #0A5757;
 	}
-	.navbar-inverse .navbar-nav > li > a:hover{    color: #A6BBBA;}
+
+	.navbar-inverse .navbar-nav > li > a:hover{
+		color: #A6BBBA;
+		background-color: #0A5757;
+	}
 	.col-md-6 .video-career{
 		display: none;
 	}

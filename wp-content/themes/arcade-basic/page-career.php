@@ -13,9 +13,9 @@ get_header();?>
 				<div class="col-md-6 remove-padding "> <!--col-md-offset-2-->
 					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="col-md-6 remove-padding add-padding-right">
+				<article class="col-md-6 remove-padding add-padding-right">
 					<?php the_content(); ?>
-				</div>
+				</article>
 			</div>
 		</div>
 	</div>
@@ -40,12 +40,15 @@ get_header();?>
 			<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
-	<div class="row recruiters">
+	<section class="row recruiters">
 		<h2 class="text-center">Let's meet!</h2>
-		<div class="col-md-4 text-center rec_grid">
+
+		<figure class="col-md-4 text-center rec_grid">
 			<p class="rec_img"><img class="img-responsive " src="<?php echo get_template_directory_uri(); ?>/img/Max_Vitruk.png" alt=""/></p>
-			<p>Max Vitruk</p>
-			<span>Android developer</span>
+			<figcaption>
+				<p>Max Vitruk</p>
+				<p>Android developer</p>
+			</figcaption>
 			<p>
 				<a href="https://www.facebook.com/profile.php?id=100006944169188&fref=ts">
 					<i class="rec fa fa-facebook"></i>
@@ -57,11 +60,14 @@ get_header();?>
 					<i class="rec fa fa-skype"></i>
 				</a>
 			</p>
-		</div>
-		<div class="col-md-4 text-center rec_grid">
+		</figure>
+
+		<figure class="col-md-4 text-center rec_grid">
 			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Petro Tsymbalistiy.png" alt=""/></p>
-			<p>Petro Tsymbalistiy</p>
-			<span>Project Manager</span>
+			<figcaption>
+				<p>Petro Tsymbalistiy</p>
+				<p>Project Manager</p>
+			</figcaption>
 			<p>
 				<a href="https://www.facebook.com/petrotsymb">
 					<i class="rec fa fa-facebook"></i>
@@ -73,11 +79,14 @@ get_header();?>
 					<i class="rec fa fa-skype"></i>
 				</a>
 			</p>
-		</div>
-		<div class="col-md-4 text-center rec_grid">
+		</figure>
+		<figure class="col-md-4 text-center rec_grid">
 			<p class="rec_img"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Bogdan Maksymchuk.png" alt=""/></p>
-			<p>Bogdan Maksymchuk</p>
-			<span>Team lead</span>
+			<figcaption>
+				<p>Bogdan Maksymchuk</p>
+				<p>Team lead</p>
+			</figcaption>
+
 			<p>
 				<a href="https://www.facebook.com/bogdan.maksimchuk.1">
 					<i class="rec fa fa-facebook"></i>
@@ -89,8 +98,8 @@ get_header();?>
 					<i class="rec fa fa-skype"></i>
 				</a>
 			</p>
-		</div>
-	</div>
+		</figure>
+	</section>
 </div>
 
 <?php
