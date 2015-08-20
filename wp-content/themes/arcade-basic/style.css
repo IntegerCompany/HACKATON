@@ -5444,5 +5444,12 @@ a img.aligncenter {
   #write-us-mob {
     font-size: 1.5em;
   }
+  .blog_grid li img {
+    width: 100%;
+    min-height: auto;
+  }
+  .blog_grid .img_block {
+    height: auto;
+  }
 
 }

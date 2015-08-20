@@ -317,7 +317,7 @@ section.row.recruiters {
 	.collapse {
 		display: block!important;
 	}
-	.pos-div h3{font-size: .97em;}
+	.pos-div h3{font-size: 1.2em;}
 }
 @media (max-width: 768px){
 	.pull-center {
