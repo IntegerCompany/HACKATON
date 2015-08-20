@@ -186,7 +186,7 @@ function bavotasan_add_js() {
 	wp_localize_script( 'theme_js', 'theme_js_vars', array(
 		'arc' => absint( $arc_text ),
 		'fittext' => esc_attr( $fittext ),
-		'lang_link' => get_language_code(),
+		'lang_link' => '',
 	) );
 
 	wp_enqueue_style( 'bootstrap', BAVOTASAN_THEME_URL .'/library/css/bootstrap.min.css', false, '4.3.1', 'all' );
