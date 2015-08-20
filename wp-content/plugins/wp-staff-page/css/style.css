@@ -29,6 +29,10 @@
 .block-profile img{
     opacity: 0.9;
     margin-top: -3%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    position: absolute;
 }
 .block-profile-inside{
     position: absolute;
@@ -105,9 +109,16 @@
     height: 250px !important;
     min-width: 250px;
     overflow: hidden;
+    max-width: 440px;
 }
 .slide-block img{
-    height: 100%!important;
+    min-height: 100%!important;
+    min-width: 100%!important;
     width: auto !important;
+    position: absolute!important;
 
+}
+
+.minux-left{
+    padding-left: 0;
 }

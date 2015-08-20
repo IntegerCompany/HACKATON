@@ -9,7 +9,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="row staff-block">
-        <div class="col-md-12">
+        <div class="col-md-12 minux-left">
 
             <?php query_posts(array('post_type' => 'staff_post'));
             $mypost = array('post_type' => 'staff_post', "category_name" => "staff", 'posts_per_page' => '-1');
@@ -48,7 +48,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 photo-slider">
+        <div class="col-md-12 photo-slider minux-left">
             <?php $mypost = array('post_type' => 'staff_post', "category_name" => "office");
             $loop = new WP_Query($mypost);
             while ($loop->have_posts()) : $loop->the_post();?>

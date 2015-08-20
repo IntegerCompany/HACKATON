@@ -78,7 +78,7 @@ h2, p, a, span{color:#fff;}
 }
 .page-carier .col-md-6 strong{
 	color: #00a5a1;
-	font-size:2em;
+	font-size:1.7em;
 }
 
 /*  Social Media Colors 
@@ -317,6 +317,7 @@ section.row.recruiters {
 	.collapse {
 		display: block!important;
 	}
+	.pos-div h3{font-size: .97em;}
 }
 @media (max-width: 768px){
 	.pull-center {
