@@ -4,8 +4,9 @@
 
  * Contains footer content and the closing of the main and #page div elements.
  */
-$bavotasan_theme_options = bavotasan_theme_options();
+	$bavotasan_theme_options = bavotasan_theme_options();
 ?>
+
 	</main><!-- main -->
 
 	<footer id="footer" role="contentinfo">
