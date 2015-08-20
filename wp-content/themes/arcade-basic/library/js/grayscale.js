@@ -3,7 +3,6 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
 (function($){
 
     // jQuery to collapse the navbar on scroll
@@ -11,6 +10,7 @@
         $navFixed = $(".navbar-fixed-top");
 
     function setNavBackgound(){
+        console.log('sdf');
         $(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
     }
 
