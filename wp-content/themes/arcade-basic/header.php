@@ -59,7 +59,7 @@
 									<?php  the_post_thumbnail('medium');;?>
 								<?php } wp_reset_query(); }
 									$menu_class = ( is_rtl() ) ? ' navbar-right' : '';
-									//wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'nav navbar-nav font-helvetic-light head-menu' . $menu_class, 'fallback_cb' => 'bavotasan_default_menu' ) );
+
 									wp_nav_menu(array('menu' => 'Menu 1', 'container'=>false, 'menu_class' => 'nav navbar-nav font-helvetic-light head-menu', 'theme_location'=>'primary', 'fallback_cb'=>false, 'walker' => '' ));
 								?>
 						</div>

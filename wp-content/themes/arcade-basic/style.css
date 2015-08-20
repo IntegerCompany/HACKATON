@@ -3836,7 +3836,7 @@ body.basic {
 
 body.basic, .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6 {
   font-family: "RobotoSlab Light", Open Sans, sans-serif;
-  color: #EEEEEE;
+color: #EEEEEE;
 }
   .basic h1 a, .basic h2 a, .basic h3 a, .basic h4 a, .basic h5 a, .basic h6 a {
     color: #282828; }
@@ -4855,7 +4855,7 @@ iframe {
   border-top: 1px solid #000;
   background: #222;
   color: #7B7B7B;
-  font-size: 13px;
+  font-size: 14px;
   position: relative;
   z-index: 100;
   clear: both;
@@ -5397,7 +5397,7 @@ a img.aligncenter {
   padding: 0 1em 0 0;
 }
 #home-description {
-  padding: 80px 0 0;
+  padding-top: 20px;
 }
 #home-description h1 {
   font-weight: bold;
@@ -5421,4 +5421,28 @@ a img.aligncenter {
   -ms-transition: .4;
   -o-transition: .4;
   transition: .4;
+}
+.logo-head > ul{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 480px) {
+
+  body.basic {
+    font-size: 14px;
+  }
+ .basic h1, .basic h2, .basic h3, .basic h4, .basic h5, .basic h6 {
+    font-size: 18px;
+  }
+ .col-md-12 .staff-header{
+   font-size: 1.7em;
+ }
+  .page-carier h2{
+    font-size: 1.7em;
+  }
+  #write-us-mob {
+    font-size: 1.5em;
+  }
+
 }
