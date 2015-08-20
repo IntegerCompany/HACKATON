@@ -36,7 +36,7 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="<?php echo get_template_directory_uri(); ?>/library/js/grayscale.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/library/js/grayscale.min.js"></script>
 
 <script>
     var mapOptionsPhp = {

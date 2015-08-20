@@ -4,19 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 (function($){
-
-    // jQuery to collapse the navbar on scroll
-    var topNavClass = "top-nav-collapse",
-        $navFixed = $(".navbar-fixed-top");
-
-    function setNavBackgound(){
-        console.log('sdf');
-        $(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
-    }
-
-    $(document).ready(function() { setNavBackgound(); });
-    $(window).load(function() { setNavBackgound(); });
-    $(window).scroll(function() { setNavBackgound(); });
+/*
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(function() {
@@ -33,6 +21,7 @@
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
+*/
 
     // Google Maps Scripts
     // When the window has finished loading create our google map below

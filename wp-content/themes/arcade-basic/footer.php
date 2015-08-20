@@ -54,60 +54,9 @@ $bavotasan_theme_options = bavotasan_theme_options();
 </div>
 </div>
 
-
-
 <?php wp_footer(); ?>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script>
-	(function($){
-		var $colapse = $(".collapse"),
-			$colapseMenu = $('.collapse > .logo-head > ul'),
-			leftPos,
-			DELAY = 500;
+<script src="<?php echo get_template_directory_uri(); ?>/js/function.min.js"></script>
 
-		$( document ).on( "swipe", openMenu );
-		$("button").on("click",openMenu );
-
-		function openMenu(){
-			$colapse.toggleClass('open');
-			leftPos = $colapse.hasClass('open') ? '0%' : '-100%';
-			$colapseMenu.animate({'left': leftPos}, DELAY);
-		}
-
-
-		$(".navbar-toggle").on("click",openMiddleMenu);
-		function openMiddleMenu(){
-
-//			var displayPos;
-					//$colapse.toggleClass('open-middle-menu');
-//					displayPos = $colapse.hasClass('open-middle-menu')? 'block':'none';
-
-			//$colapse.slideToggle("600");
-
-			if ($('$colapse').is(":hidden")) {
-				$('$colapse').slideDown("slow");
-			} else {
-				$('$colapse').slideUp("slow");
-			}
-
-
-
-			//console.log('displayPos = ' + displayPos);
-
-
-//			if($colapseMenu.css("display", "none")){
-//				$colapseMenu.css("display", "block");
-//			}else{
-//				$colapseMenu.css("display", "block");
-//			}
-		}
-		$(".logo-head a").click(function(event){
-			$("#menu-menu-1").css("left", "-100%");
-		});
-
-	})(window.jQuery);
-
-	jQuery(function($){});
-</script>
 </body>
 </html>
