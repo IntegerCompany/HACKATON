@@ -31,7 +31,7 @@
 ?>
 
 <body <?php body_class(); ?>>
-	<a href="mailto:kryvun.roman@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us','linkup'); ?></a>
+	<a href="mailto:kryvun.roman@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us', TEXTDOMAIN); ?></a>
 
 	<div id="page" class="container-fluid mar-pad">
 		<div class="row">

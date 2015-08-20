@@ -338,14 +338,6 @@ section.row.recruiters {
 		margin-right: 15px;
 		background: rgba(0, 0, 0, 0.6);
 	}
-	.logo-head.container {
-		background-color: #0A5757;
-	}
-
-	.navbar-inverse .navbar-nav > li > a:hover{
-		color: #A6BBBA;
-		background-color: #0A5757;
-	}
 	.col-md-6 .video-career{
 		display: none;
 	}

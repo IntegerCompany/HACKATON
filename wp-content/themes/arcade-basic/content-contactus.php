@@ -1,27 +1,9 @@
 <?php
 /**
- * Template Name: Home content
+ * Template Name: Contact Page
  *
  */
-
-
-$pageID = 16;
-$homeContent = get_post($pageID, 'ARRAY_A');
-
 ?>
-
-<div id="home-description" class="container">
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-12">
-                <?php echo get_the_post_thumbnail( $pageID, 'large'); ?>
-                <h1><?php echo $homeContent['post_title']; ?></h1>
-                <h2><?php echo $homeContent['post_content']; ?></h2>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- Map Section -->
 

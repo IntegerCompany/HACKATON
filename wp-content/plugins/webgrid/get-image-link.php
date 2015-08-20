@@ -14,7 +14,7 @@
 ?>
 
 <img
-	src="http://localhost/HACKATON/wp-content/uploads/greed/<?php echo get_option('thumb-'.$_POST['count']); ?>"
+	src="http://integer.webdecision.com.ua/wp-content/uploads/greed/<?php echo get_option('thumb-'.$_POST['count']); ?>"
 	data-page="<?php echo $currentPost->post_name; ?>"
 />
 <span class="dark">
