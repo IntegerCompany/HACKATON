@@ -16,7 +16,7 @@
 ?>
 
 <img
-	src="<?php echo $dir['baseurl']; ?>/wp-content/uploads/greed/<?php echo get_option('thumb-'.$_POST['count']); ?>"
+	src="<?php echo $dir['baseurl']; ?>/greed/<?php echo get_option('thumb-'.$_POST['count']); ?>"
 	data-page="<?php echo $currentPost->post_name; ?>"
 />
 <div class="dark">
