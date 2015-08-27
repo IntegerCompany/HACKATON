@@ -3911,12 +3911,38 @@ input, textarea {
   z-index: 1;
   width: 100%;
   display: table;
-  text-align: center; }
+  text-align: center;
+  height: 300px;
+}
+.home .title-card {
+  height: 100vh;
+}
 .title-card > img.header-img {
   position: absolute;
   z-index: 0;
   left: -9999px;
-  max-width: none; }
+  max-width: none;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.header-bg-img {
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.title-card > img.header-imgR{
+  position: absolute;
+  max-width: none;
+  left: 0;
+  width: auto;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
 
 #site-meta {
   display: table-cell;
@@ -4022,7 +4048,10 @@ input, textarea {
   border-color: #fff;
   color: #fff; }
 .only-on-home #more-site {
-  display: inline-block; }
+  display: inline-block;
+  background-color: rgba(11, 25, 39, 0.64);
+  border-color: #778281;
+}
 @media (max-width: 600px) {
   #more-site {
     display: none !important; } }
@@ -4031,11 +4060,12 @@ input, textarea {
 #site-description,
 #more-site {
   position: relative; }
-.only-on-home #site-meta i, .only-on-home
-#site-description, .only-on-home
-#more-site {
-  -webkit-animation: fadeHeader 1 1s ease-in;
-  animation: fadeHeader 1 1s ease-in; }
+.only-on-home #site-meta i,
+.only-on-home #site-description,
+.only-on-home #more-site {
+  /*-webkit-animation: fadeHeader 1 1s ease-in;*/
+  /*animation: fadeHeader 1 1s ease-in;*/
+}
 
 @-webkit-keyframes fadeHeader {
   0% {
@@ -5455,7 +5485,42 @@ a img.aligncenter {
   width: 1.5em;
   text-align: center;
 }
+
+.bg-video-wrap {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bg-video-wrap .bg-mask{
+  position: fixed;
+  background: url('./img/overlay-pattern.png') repeat scroll 0 0!important;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.8!important;
+}
+.bg-video{
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  width: auto;
+  min-height: 100%;
+}
+
 @media (max-width: 767px) {
+  .home .title-card{
+    height: 300px!important;
+  }
+  .only-on-home #more-site{
+    display: none!important;
+  }
   #contact-box{
     position: relative;
     background-color: rgb(10, 87, 87);

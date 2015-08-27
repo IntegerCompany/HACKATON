@@ -26,12 +26,10 @@
 <?php
 	$bavotasan_theme_options = bavotasan_theme_options();
 	$space_class = '';
-
-	$is_home_page = array_search('home', get_body_class() );
 ?>
 
 <body <?php body_class(); ?>>
-	<a href="mailto:kryvun.roman@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us', TEXTDOMAIN); ?></a>
+	<a href="mailto:Integer.ukraine@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us', TEXTDOMAIN); ?></a>
 
 	<div id="page" class="container-fluid mar-pad">
 		<div class="row">
@@ -75,25 +73,14 @@
 			 <div class="title-card-wrapper">
                 <div class="title-card">
     				<div id="site-meta">
-<!--    					<h1 id="site-title">-->
-<!--							--><?php //if( is_int($is_home_page) ){
-//    							bloginfo( 'name' );
-//							} else { ?>
-<!--								<a href="--><?php //echo esc_url( home_url() ); ?><!--" title="--><?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a>-->
-<!--							--><?php //} ?>
-<!--    					</h1>-->
-						<a class="logo-integer" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/integer-logo-white.png" alt=""/></a>
+						<a class="logo-integer" href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/img/integer-logo-white.png" alt=""/></a>
 
     					<?php if ( $bavotasan_theme_options['header_icon'] ) { ?>
     					<i class="fa <?php echo $bavotasan_theme_options['header_icon']; ?>"></i>
     					<?php } else {
     						$space_class = ' class="margin-top"';
-    					} ?>
+    					}
 
-<!--    					<h2 id="site-description"--><?php //echo $space_class; ?><!-->
-<!--    						--><?php //bloginfo( 'description' ); ?>
-<!--    					</h2>-->
-						<?php
 						/**
 						 * You can overwrite the defeault 'See More' text by defining the 'BAVOTASAN_SEE_MORE'
 						 * constant in your child theme's function.php file.
@@ -101,18 +88,38 @@
 						if ( ! defined( 'BAVOTASAN_SEE_MORE' ) )
 							define( 'BAVOTASAN_SEE_MORE', __( 'See More', 'arcade' ) );
 						?>
-    					<a href="#" id="more-site" class="btn btn-default btn-lg"><?php echo BAVOTASAN_SEE_MORE; ?></a>
+    					<a href="javascript:void(0)" id="more-site" class="btn btn-default btn-lg"><?php echo BAVOTASAN_SEE_MORE; ?></a>
     				</div>
 
     				<?php
 						// Header image section
 
+						bavotasan_header_images();
+/*
+						$is_home_page = array_search('home', get_body_class() );
 						if( is_int($is_home_page) ){
-							$video_url = 'https://www.youtube.com/watch?v=63Rvjw-K9vM';
-							echo do_shortcode('[mbYTPlayer url="'.$video_url.'" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
+
+							$video_home_url = 'http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4';
+							/*$video_url = 'https://www.youtube.com/watch?v=63Rvjw-K9vM';
+
+					?>
+							<video controls="" autoplay="" name="media" loop="" preload="metadata">
+								<source src="http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4" type="video/mp4">
+							</video>
+						<?php
+					bavotasan_header_images();
+					?>
+							<div class="bg-video-wrap">
+								<div class="bg-mask"></div>
+								<video class="bg-video hidden-xs" preload="metadata" autoplay="true" loop="loop" muted="muted" poster="">
+									<source src="<?php echo $video_home_url; ?>" type="video/webm">
+									<source src="<?php echo $video_home_url; ?>" type="video/mp4">
+								</video>
+							<?php
+							//echo do_shortcode('[mbYTPlayer url="'.$video_url.'" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
 						} else {
 							bavotasan_header_images();
-						}
+						}//*/
     				?>
 				</div>
 			</div>

@@ -579,14 +579,38 @@ function bavotasan_header_images() {
 	$custom_image = ( is_singular() || get_option( 'page_for_posts' ) == $post_id || is_attachment() ) ? get_post_meta( $post_id, 'arcade_basic_custom_image', true ) : '';
 
 	if ( $custom_image ) {
-		echo '<img src="' . esc_url( $custom_image ) . '" alt="" class="header-img" />';
+		//echo '<img src="' . esc_url( $custom_image ) . '" alt="" class="header-img" />';
+		$img_src = esc_url( $custom_image );
 	} else {
-		if ( $header_image = get_header_image() ) :
-			?>
-			<img class="header-img" src="<?php header_image(); ?>" alt="" />
-			<?php
-		endif;
+		if ( $header_image = get_header_image() ) {
+			$img_src = get_header_image();
+		}
 	}
+
+	$img_class = 'header-imgR';
+	$is_home_page = array_search('page-template-content-home', get_body_class() );
+
+	?>
+		<div class="bg-video-wrap header-bg-img" style="background-image: url('<?php echo $img_src; ?>');">
+	<?php
+	if( is_int($is_home_page) ){
+		$img_class .= ' hidden-md hidden-lg';
+		$video_home_url = 'http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4';
+
+		?>
+			<div class="bg-mask"></div>
+			<video class="bg-video hidden-xs hidden-sm" preload="metadata" autoplay="true" loop="loop" muted="muted" poster="">
+				<source src="<?php echo $video_home_url; ?>" type="video/webm">
+				<source src="<?php echo $video_home_url; ?>" type="video/mp4">
+			</video>
+		<?php
+	}
+
+	?>
+		</div>
+	<?php
+
+//	echo '<img class="'.$img_class.'" src="'.$img_src.'" alt="" />';
 }
 
 /**
