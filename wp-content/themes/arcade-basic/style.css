@@ -3913,6 +3913,12 @@ input, textarea {
   display: table;
   text-align: center;
   height: 300px;
+
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .home .title-card {
   height: 100vh;
@@ -5446,6 +5452,10 @@ a img.aligncenter {
 .home main {
   background-color: #0f0f0f;
 }
+main{
+  position: relative;
+  z-index: 1;
+}
 .blog_grid h3 {
   color: #282828;
   -webkit-transition: .4;
@@ -5514,6 +5524,11 @@ a img.aligncenter {
   min-height: 100%;
 }
 
+@media (min-width: 992px) {
+  .home .header-bg-img{
+    background-image: none!important;
+  }
+}
 @media (max-width: 767px) {
   .home .title-card{
     height: 300px!important;

@@ -21,7 +21,7 @@ button.button-mobile {
 	display: none;
 }
 a.logo-integer {
-	display: block;
+	display: inline-block;
 	margin-bottom: -35px;
 }
 h2, p, a, span{color:#fff;}
