@@ -595,7 +595,9 @@ function bavotasan_header_images() {
 	<?php
 	if( is_int($is_home_page) ){
 		$img_class .= ' hidden-md hidden-lg';
-		$video_home_url = 'http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4';
+
+		$dir = wp_upload_dir();
+		$video_home_url = $dir['baseurl'].'/2015/08/Hackaton_1.mp4';
 
 		?>
 			<div class="bg-mask"></div>
