@@ -68,12 +68,10 @@
 
 			</nav><!-- #site-navigation -->
 
-
-
 			 <div class="title-card-wrapper">
                 <div class="title-card">
     				<div id="site-meta">
-						<a class="logo-integer" href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/img/integer-logo-white.png" alt=""/></a>
+						<a class="logo-integer" href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/integer-logo-white.png" alt=""/></a>
 
     					<?php if ( $bavotasan_theme_options['header_icon'] ) { ?>
     					<i class="fa <?php echo $bavotasan_theme_options['header_icon']; ?>"></i>
@@ -93,33 +91,7 @@
 
     				<?php
 						// Header image section
-
 						bavotasan_header_images();
-/*
-						$is_home_page = array_search('home', get_body_class() );
-						if( is_int($is_home_page) ){
-
-							$video_home_url = 'http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4';
-							/*$video_url = 'https://www.youtube.com/watch?v=63Rvjw-K9vM';
-
-					?>
-							<video controls="" autoplay="" name="media" loop="" preload="metadata">
-								<source src="http://localhost/HACKATON/wp-content/uploads/2015/08/Hackaton_1.mp4" type="video/mp4">
-							</video>
-						<?php
-					bavotasan_header_images();
-					?>
-							<div class="bg-video-wrap">
-								<div class="bg-mask"></div>
-								<video class="bg-video hidden-xs" preload="metadata" autoplay="true" loop="loop" muted="muted" poster="">
-									<source src="<?php echo $video_home_url; ?>" type="video/webm">
-									<source src="<?php echo $video_home_url; ?>" type="video/mp4">
-								</video>
-							<?php
-							//echo do_shortcode('[mbYTPlayer url="'.$video_url.'" opacity="1" quality="default" ratio="auto" isinline="false" autoplay="true" startat="0" showcontrols="false" printurl="false" mute="true" loop="true" addraster="true"]');
-						} else {
-							bavotasan_header_images();
-						}//*/
     				?>
 				</div>
 			</div>
