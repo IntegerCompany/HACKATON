@@ -1564,7 +1564,6 @@ table th[class*="col-"] {
   border-bottom-right-radius: 6px;
   color: #fff;
   text-transform: uppercase;
-  /*font-family: 'Raleway medium','Helvetica Neue',Helvetica,Arial,sans-serif;*/
   font-size: 15px;
   border: 0;
   text-decoration: none;
@@ -3914,6 +3913,8 @@ input, textarea {
   text-align: center;
   height: 300px;
 
+  white-space: pre-line;
+
   -moz-user-select: -moz-none;
   -o-user-select: none;
   -khtml-user-select: none;
@@ -5350,7 +5351,9 @@ a img.aligncenter {
 }
 
 .head-menu li a{
-  font-size:2rem !important;
+  /*font-size:2rem !important;*/
+  font-size: 1.75rem!important;
+  padding: 10px 1.5rem;
   color:white ;
   line-height: 20px !important;
 }
