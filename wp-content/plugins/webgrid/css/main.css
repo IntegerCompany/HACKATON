@@ -6,7 +6,7 @@
     margin: 20px auto;
 }
 #grid-template.frontend{
-	display: none;
+	/*display: none;*/
 }
 #grid-template.frontend td {
 	vertical-align: middle;
