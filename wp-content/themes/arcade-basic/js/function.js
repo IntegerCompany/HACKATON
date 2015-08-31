@@ -36,6 +36,7 @@
 
 		$(document).ready(function(){
 
+			$('html').niceScroll();
 			$('#writeUsModal textarea').prop('rows', 5);
 
 			var loaderImg = 'http://localhost/HACKATON/wp-content/themes/arcade-basic/img/loader-mail.gif';

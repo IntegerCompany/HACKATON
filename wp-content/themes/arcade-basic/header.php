@@ -22,6 +22,7 @@
 	<!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 
 	<?php wp_head(); ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.nicescroll.min.js"></script>
 </head>
 <?php
 	$bavotasan_theme_options = bavotasan_theme_options();
@@ -29,6 +30,7 @@
 ?>
 
 <body <?php body_class(); ?>>
+
 	<span id="write-us" data-toggle="modal" data-target="#writeUsModal"><?php _e('write us', TEXTDOMAIN); ?></span>
 
 	<div id="writeUsModal" class="modal fade">
