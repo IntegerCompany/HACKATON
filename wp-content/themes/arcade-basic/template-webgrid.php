@@ -9,7 +9,7 @@ wp_head();
 <?php ?>
 	<div class="container">
 		<div class="row">
-			<h1 class="text-center"><?php the_title(); ?></h1>
+			<h1 class="page-top-title"><?php the_title(); ?></h1>
 			<?php do_shortcode('[webgrid]'); ?>
 		</div>
 	</div>

@@ -7,8 +7,7 @@
     margin: 3%;
 }
 .staff-block{
-    margin-bottom: 5%;
-
+    /*margin-bottom: 5%;*/
 }
 .staff-block *{
     -webkit-transition: all 1s ease;
@@ -53,7 +52,7 @@
 }
 .name-staff{
     font-weight: 600;
-    font-size: 1.80em;
+    font-size: 1.5em;
     color: white!important;
     position: absolute;
     top: 0;

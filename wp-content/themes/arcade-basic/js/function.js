@@ -35,6 +35,14 @@
 		});
 
 		$(document).ready(function(){
+
+			$('#writeUsModal textarea').prop('rows', 5);
+
+			var loaderImg = 'http://localhost/HACKATON/wp-content/themes/arcade-basic/img/loader-mail.gif';
+
+			$('#writeUsModal .modal-footer img').prop('src', loaderImg);
+
+
 			var topNavClass = "top-nav-collapse",
 				$navFixed = $(".navbar-fixed-top");
 

@@ -29,7 +29,21 @@
 ?>
 
 <body <?php body_class(); ?>>
-	<a href="mailto:Integer.ukraine@gmail.com<?php // echo types_render_field("contact-email"); ?>" id="write-us" target="_blank"><?php _e('write us', TEXTDOMAIN); ?></a>
+	<span id="write-us" data-toggle="modal" data-target="#writeUsModal"><?php _e('write us', TEXTDOMAIN); ?></span>
+
+	<div id="writeUsModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><?php _e( 'Write us', TEXTDOMAIN ); ?></h4>
+				</div>
+				<div class="modal-body">
+					<?php echo do_shortcode('[contact-form-7 id="141" title="write us (en)"]'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="page" class="container-fluid mar-pad">
 		<div class="row">
@@ -39,8 +53,8 @@
 		<header id="header">
 			<nav id="site-navigation" class="navbar navbar-inverse navbar-fixed-top navbar-transparent" role="navigation">
 				<div class="row">
-					<h3 class="sr-only"><?php _e( 'Main menu', 'arcade' ); ?></h3>
-					<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade' ); ?>"><?php _e( 'Skip to content', 'arcade' ); ?></a>
+					<h3 class="sr-only"><?php _e( 'Main menu', TEXTDOMAIN ); ?></h3>
+					<a class="sr-only" href="#primary" title="<?php _e( 'Skip to content', TEXTDOMAIN ); ?>"><?php _e( 'Skip to content', TEXTDOMAIN ); ?></a>
 					<button id="button-mobile" class="button-mobile"></button>
 					<div class="navbar-mobile"></div>
 					<div class="navbar-header">

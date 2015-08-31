@@ -10,7 +10,8 @@
 	</main><!-- main -->
 
 	<footer id="footer" role="contentinfo">
-		<a href="mailto:kryvun.roman@gmail.com" id="write-us-mob" target="_blank" style="position: relative;">write us</a>
+		<span id="write-us-mob" data-toggle="modal" data-target="#writeUsModal"><?php _e('write us', TEXTDOMAIN); ?></span>
+
 		<div id="footer-content" class="container">
 			<div class="row">
 				<div class="copyright col-lg-12">
@@ -57,7 +58,7 @@
 
 <?php wp_footer(); ?>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/function.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/function.js"></script>
 
 </body>
 </html>

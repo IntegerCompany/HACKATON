@@ -1559,7 +1559,6 @@ table th[class*="col-"] {
   text-align: center;
   padding: 0 15px;
   background: rgba(34, 34, 34, 0.6);
-  cursor: pointer;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   color: #fff;
@@ -1601,11 +1600,21 @@ table th[class*="col-"] {
 }
 #write-us,
 #write-us-mob {
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
   -webkit-transition: .2s;
   -moz-transition: .2s;
   -ms-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+}
+#write-us:focus {
+  outline: none;
 }
 
 @media (max-width: 767px) {
@@ -5465,11 +5474,11 @@ main{
 }
 .blog_grid h3 {
   color: #282828;
-  -webkit-transition: .4;
-  -moz-transition: .4;
-  -ms-transition: .4;
-  -o-transition: .4;
-  transition: .4;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 .logo-head > ul{
   -webkit-user-select: none;
@@ -5513,6 +5522,7 @@ main{
 }
 .bg-video-wrap .bg-mask{
   position: fixed;
+  top: 0;
   background: url('./img/overlay-pattern.png') repeat scroll 0 0!important;
   height: 100%;
   width: 100%;
@@ -5544,6 +5554,106 @@ main{
   border-bottom: 1px solid #eeeeee;
   text-align: center;
 }
+
+/*
+**  Modal
+*/
+
+#writeUsModal .modal-body {
+  overflow: hidden;
+  padding: 15px 0 0;
+}
+#writeUsModal .modal-content {
+  background-color: #0A5757;
+  background-color: #3D3E3E;
+}
+#writeUsModal p {
+  width: 50%;
+  float: left;
+  padding: 0 20px;
+  display: inline-block;
+}
+#writeUsModal p input,
+#writeUsModal .description textarea{
+  width: 100%;
+  border-radius: 0px;
+  resize: none;
+}
+#writeUsModal .description {
+  width: 100%;
+}
+#writeUsModal .modal-title {
+  text-shadow: 0 0;
+}
+#writeUsModal .ajax-loader {
+  display: block;
+  opacity: 1;
+  float: right;
+  right: 32px;
+  top: 25px;
+  z-index: 9;
+  position: absolute;
+  width: 16px;
+}
+#writeUsModal div.wpcf7-response-output{
+  margin: 5px 20px;
+  padding: 5px;
+  font-size: .95em;
+  color: #000;
+}
+#writeUsModal div.wpcf7-validation-errors {
+  border: 2px solid #f7e700;
+  background-color: #f7e700;
+}
+#writeUsModal div.wpcf7-mail-sent-ok{
+  border: 2px solid #398f14;
+  background-color: #398f14;
+}
+#writeUsModal .modal-header .close {
+  font-size: 24px;
+  color: #FFF;
+  text-shadow: 2px 2px 0 #000000;
+
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+#writeUsModal p.submit input {
+  color: #000;
+  background-color: #36AD36;
+  text-shadow: 0 0;
+}
+#writeUsModal .modal-footer{
+  overflow: hidden;
+  text-align: right;
+  padding: 15px 20px;
+  position: relative;
+}
+#writeUsModal .modal-footer button,
+#writeUsModal .modal-footer input {
+  float: none;
+  /*margin: 0 5px;*/
+  margin: 0;
+  border-radius: 0;
+  width: 50%;
+  font-size: 1em;
+
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.modal-backdrop {
+  background-color: rgba(15, 15, 15, 0.7);
+}
+
+
+/*
+**  Modal [End]
+*/
 
 @media (min-width: 992px) {
   .home .header-bg-img{
@@ -5603,7 +5713,7 @@ main{
   }
   .blog_grid li img {
     width: 100%;
-    min-height: auto;
+    min-height: unset;
   }
   .blog_grid .img_block {
     height: auto;
