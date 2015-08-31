@@ -8,7 +8,7 @@ get_header();?>
 <div class="container page-carier ">
 	<div class="container-fluid video-text">
 		<div class="row">
-			<h2 class="text-center"><?php the_title();?></h2>
+			<h1 class="page-top-title"><?php the_title();?></h1>
 			<div class="container">
 				<div class="col-md-6 remove-padding "> <!--col-md-offset-2-->
 					<iframe class="video-career" width="100%" height="400" src="https://www.youtube.com/embed/W3CDMDktEBc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>

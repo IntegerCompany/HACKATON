@@ -26,6 +26,14 @@
 
 }
 
+.page-top-title{
+    padding: 20px 0;
+    line-height: 1em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+}
+
 .block-profile img{
     opacity: 0.9;
     margin-top: -3%;

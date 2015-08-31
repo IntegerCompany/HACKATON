@@ -25,14 +25,21 @@ $homeContent = get_post($pageID, 'ARRAY_A');
 
 <!-- Map Section -->
 
-<div id="cotact-info" class="container-fluid">
-    <h1 id="contact-title" class="container"><?php _e('Contact Us', TEXTDOMAIN); ?></h1>
+<div id="contact-info" class="container-fluid">
+    <div id="pre-contact-block"></div>
+
+    <h1 id="contact-title" class="container page-top-title"><?php _e('Contact Us', TEXTDOMAIN); ?></h1>
     <div id="contact-box">
         <ul id="contact-content">
-            <li><i class="fa fa-map-marker" title="Location"></i>V.Velykoho 2 Street, Ukraine</li>
+            <li><i class="fa fa-map-marker" title="Location"></i>V.Velykoho 2 Street, Lvivl, Ukraine</li>
             <li><i class="fa fa-envelope" title="Email"></i>Integer.ukraine@gmail.com</li>
             <li><i class="fa fa-skype" title="Skype"></i>IntegerDevCompany</li>
             <li><i class="fa fa-phone-square" title="Phone"></i>+38099 229 93 33</li>
+            <li>
+                <a id="show-on-map" href="">
+                    <i class="fa fa-globe"></i>Show on map
+                </a>
+            </li>
         </ul>
     </div>
     <div id="map" style="height: 500px;background-color: #333333"></div>

@@ -5447,10 +5447,14 @@ a img.aligncenter {
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px -50px 150px 0px rgb(8, 8, 8);
 }
-#cotact-info{
-  padding-top: 50px;
-  margin-left: -20px;
-  margin-right: -20px;
+#pre-contact-block{
+  height: 0;
+  position: absolute;
+  width: 100%;
+  top: -50px;
+}
+#contact-info{
+  margin: 20px -20px 0;
 }
 .home main {
   background-color: #0f0f0f;
@@ -5489,8 +5493,8 @@ main{
   padding: 0 30px;
 }
 #contact-title {
-  margin: .5em auto;
-  padding: 0 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contact-content .fa {
   padding-right: 5px;
@@ -5525,6 +5529,20 @@ main{
   min-width: 100%;
   width: auto;
   min-height: 100%;
+}
+#show-on-map {
+  color: inherit;
+}
+#show-on-map:hover,
+#show-on-map:hover * {
+  color: #19FFF7;
+}
+.page-top-title{
+  padding: 20px 0;
+  line-height: 1em;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #eeeeee;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
