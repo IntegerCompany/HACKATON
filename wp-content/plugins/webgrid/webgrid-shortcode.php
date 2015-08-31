@@ -5,41 +5,37 @@ function webgrid_out( $atts ) {
 ?>
 <?php
 	$table = get_option('grid_template');
-	echo "<div id='grid-template' class='frontend'>".$table."</div>";
-	echo "<div class='webgrid-loader'></div>";
-?>
 
-<script type="text/javascript">
-(function($){
+    $newtable = '';
 
- 	$(document).ready(function(){
+    $count = substr_count($table, 'td')/2;
 
- 		var count = 0;
- 		$('#grid-template table td').each(function(){
- 			var curr = $(this);
- 			$.ajax({
- 				url: "<?php echo plugins_url();  ?>/webgrid/get-image-link.php",
- 				method: "post",
- 				data: {
- 					'count' : ++count
- 				}
- 			}).done(function(data){
-				curr.append('<a>' + data + '</a>');
-				$('#grid-template table td img').each(function(){
-					var pId = $(this).data('page');
-					$(this).parent().attr('href', "<?php echo site_url(); ?>/" + pId);
-				});
-				$('#grid-template + .webgrid-loader').hide(0);
-				$('#grid-template').show(0);
- 			});
- 		});
- 	});
- 				
-})(window.jQuery);
-</script>
+    $postid = get_option('thumb-text');
+    $pos = 0;
+    $start = 0;
+    for($i = 1; $i <= $count; $i++){
+        $currentPost = get_post($postid[$i]);
 
-<?php
-	
+        $dir = wp_upload_dir();
+        $pos = stripos($table, '</td>', $pos + 5);
+
+        $res = "<a href='".site_url().'/'.$currentPost->post_name."'><img src='" . $dir['baseurl'] . "/greed/" . get_option('thumb-' . $i) . "' " .
+            "data-page='" . $currentPost->post_name . "' />" .
+            "<div class='dark'>" .
+            "<h3>" . $currentPost->post_title . "</h3>" .
+            "</div></a>";
+
+        $newtable .= substr($table, $start, $pos - $start) . $res;
+
+        $start = $pos;
+
+    }
+
+    if(!empty($newtable)){
+        $newtable .= '</td>' . substr($table, $start);
+    }
+
+	echo "<div id='grid-template' class='frontend'>".$newtable."</div>";
 }
 
 add_shortcode( 'webgrid', 'webgrid_out' );
