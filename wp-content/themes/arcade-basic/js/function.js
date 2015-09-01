@@ -60,6 +60,14 @@
 			$(window).scroll(function(){ setNavBackgound(); });
 		});
 
+		$('#write-us, #write-us-mob').click(function() {
+			$('.modal')
+				.prop('class', 'modal fade') // revert to default
+				.addClass( $(this).data('direction') );
+			$('.modal').modal('show');
+		});
+
+
 	})(window.jQuery);
 
 //	jQuery(function($){});

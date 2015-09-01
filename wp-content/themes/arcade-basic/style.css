@@ -5559,6 +5559,15 @@ main{
 /*
 **  Modal
 */
+.modal-form{
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+.modal.fade:not(.in).right .modal-dialog {
+  -webkit-transform: translate3d(25%, 0, 0);
+  transform: translate3d(25%, 0, 0);
+}
 
 #writeUsModal .modal-body {
   overflow: hidden;
@@ -5569,10 +5578,9 @@ main{
   background-color: #3D3E3E;
 }
 #writeUsModal p {
-  width: 50%;
-  float: left;
+  width: 100%;
   padding: 0 20px;
-  display: inline-block;
+
 }
 #writeUsModal p input,
 #writeUsModal .description textarea{
@@ -5597,14 +5605,32 @@ main{
   width: 16px;
 }
 #writeUsModal div.wpcf7-response-output{
-  margin: 5px 20px;
-  padding: 5px;
+  margin: 5px 20px 20px;
+  padding: 10px;
+  text-align: center;
   font-size: .95em;
-  color: #000;
+
 }
 #writeUsModal div.wpcf7-validation-errors {
-  border: 2px solid #f7e700;
-  background-color: #f7e700;
+  border:none;
+  background: rgba(247,66,34,1);
+  background: -moz-linear-gradient(left, rgba(247,66,34,1) 0%, rgba(247,66,34,0.99) 16%, rgba(236,35,9,0.98) 51%, rgba(235,41,15,0.97) 82%, rgba(230,43,25,0.96) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,66,34,1)), color-stop(16%, rgba(247,66,34,0.99)), color-stop(51%, rgba(236,35,9,0.98)), color-stop(82%, rgba(235,41,15,0.97)), color-stop(100%, rgba(230,43,25,0.96)));
+  background: -webkit-linear-gradient(left, rgba(247,66,34,1) 0%, rgba(247,66,34,0.99) 16%, rgba(236,35,9,0.98) 51%, rgba(235,41,15,0.97) 82%, rgba(230,43,25,0.96) 100%);
+  background: -o-linear-gradient(left, rgba(247,66,34,1) 0%, rgba(247,66,34,0.99) 16%, rgba(236,35,9,0.98) 51%, rgba(235,41,15,0.97) 82%, rgba(230,43,25,0.96) 100%);
+  background: -ms-linear-gradient(left, rgba(247,66,34,1) 0%, rgba(247,66,34,0.99) 16%, rgba(236,35,9,0.98) 51%, rgba(235,41,15,0.97) 82%, rgba(230,43,25,0.96) 100%);
+  background: linear-gradient(to right, rgba(247,66,34,1) 0%, rgba(247,66,34,0.99) 16%, rgba(236,35,9,0.98) 51%, rgba(235,41,15,0.97) 82%, rgba(230,43,25,0.96) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f74222', endColorstr='#e62b19', GradientType=1 );
+}
+#writeUsModal span.wpcf7-not-valid-tip{
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+
+
+#writeUsModal .modal-footer button:focus,
+#writeUsModal .modal-footer input:focus{
+  outline: none;
 }
 #writeUsModal div.wpcf7-mail-sent-ok{
   border: 2px solid #398f14;

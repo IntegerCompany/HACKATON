@@ -31,11 +31,11 @@
 
 <body <?php body_class(); ?>>
 
-	<span id="write-us" data-toggle="modal" data-target="#writeUsModal"><?php _e('write us', TEXTDOMAIN); ?></span>
+	<span id="write-us" class='btn' data-direction='right' ><?php _e('write us', TEXTDOMAIN); ?></span> <!--data-toggle="modal" data-target="#writeUsModal"  -->
 
 	<div id="writeUsModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content modal-form">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title"><?php _e( 'Write us', TEXTDOMAIN ); ?></h4>

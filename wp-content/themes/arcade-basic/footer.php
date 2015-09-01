@@ -10,7 +10,7 @@
 	</main><!-- main -->
 
 	<footer id="footer" role="contentinfo">
-		<span id="write-us-mob" data-toggle="modal" data-target="#writeUsModal"><?php _e('write us', TEXTDOMAIN); ?></span>
+		<span id="write-us-mob" data-direction='top' ><?php _e('write us', TEXTDOMAIN); ?></span>
 
 		<div id="footer-content" class="container">
 			<div class="row">
