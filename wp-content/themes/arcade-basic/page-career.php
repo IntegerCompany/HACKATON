@@ -20,29 +20,63 @@ get_header();?>
 		</div>
 	</div>
 	<div class="row media-row">
-		<h2 class="text-center">Positions</h2>
+		<h2 class="text-center"><?php _e('Positions', TEXTDOMAIN); ?></h2>
 		<?php $posts = get_posts("cat=3&orderby=date&numberposts=12"); ?>
 		<?php if ($posts) : ?>
 			<?php foreach ($posts as $post) : setup_postdata ($post); ?>
-				<div class="col-md-4  text-center pos-div"><a class="career-pos-color" href="javascript:void(0);">
+				<div class="col-md-4  text-center pos-div">
+					<a class="career-pos-color" href="<?php echo get_permalink(); ?>">
 					<?php
-					if(function_exists('add_theme_support')) {
-						?>
-						<h3 class="position_title" > <?php echo the_title(); ?></h3 >
-						<div class="job-icon"><i class="fa fa-<?php echo  types_render_field( "job-icon" ); ?>" ></i ></div>
 
-						<?php
-						//the_post_thumbnail('medium');
-						}
-					?></a>
+					if(function_exists('add_theme_support')) : ?>
+						<h3 class="position_title"> <?php echo the_title(); ?></h3>
+						<div class="job-icon"><i class="fa fa-<?php echo  types_render_field( "job-icon" ); ?>"></i ></div>
+					<?php endif; ?>
+					</a>
 				</div>
 
 			<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
-	<section class="row recruiters">
-		<h2 class="text-center">Let's meet!</h2>
 
+	<section class="row recruiters">
+		<h2 class="text-center"><?php _e("Let's meet!", TEXTDOMAIN); ?></h2>
+
+		<?php
+			$posts = get_posts("cat=7&orderby=title&numberposts=-1");
+
+		if ($posts) {
+				foreach ($posts as $post) : setup_postdata($post); ?>
+
+					<figure class="col-md-4 text-center rec_grid">
+						<p class="rec_img">
+							<?php the_post_thumbnail(array('220', '220')); ?>
+						</p>
+						<figcaption>
+							<p><?php echo the_title(); ?></p>
+
+							<p><?php echo the_content(); ?></p>
+						</figcaption>
+						<p>
+							<?php
+							$facebook_link = types_render_field('facebook-rec');
+							print_social($facebook_link, 'facebook');
+
+							$linkedin_link = types_render_field('linkedin-rec');
+							print_social($linkedin_link, 'linkedin');
+
+							$skype_link = types_render_field('skype-rec');
+							print_social($skype_link, 'skype');
+							?>
+						</p>
+					</figure>
+
+					<?php
+				endforeach;
+			}
+		?>
+
+		<?php /* ?>
 		<figure class="col-md-4 text-center rec_grid">
 			<p class="rec_img"><img class="img-responsive " src="<?php echo get_template_directory_uri(); ?>/img/Max_Vitruk.png" alt=""/></p>
 			<figcaption>
@@ -75,7 +109,7 @@ get_header();?>
 				<a href="https://www.linkedin.com/profile/view?id=300540683">
 					<i class="rec fa fa-linkedin"></i>
 				</a>
-				<a href="petyagrek">
+					<a href="petyagrek">
 					<i class="rec fa fa-skype"></i>
 				</a>
 			</p>
@@ -99,6 +133,7 @@ get_header();?>
 				</a>
 			</p>
 		</figure>
+ 		<?php //*/ ?>
 	</section>
 </div>
 

@@ -788,3 +788,12 @@ function more_blogs()
 }
 add_action( 'wp_ajax_nopriv_more_blogs', 'more_blogs' );
 add_action( 'wp_ajax_more_blogs', 'more_blogs' );
+
+function print_social($var, $icon){
+	if (!empty($var) ) {
+		$val = $icon == 'skype' ? 'skype:'.$var.' ?chat' : $var;
+
+		echo '<a href = "'.$val.'" target="_blank"><i class="rec fa fa-'.$icon.'"></i></a >' ;
+	}
+}
+
