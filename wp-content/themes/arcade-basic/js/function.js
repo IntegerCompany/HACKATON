@@ -34,6 +34,19 @@
 			$colapse.removeClass('open in');
 		});
 
+
+		var topNavClass = "top-nav-collapse",
+			$navFixed = $(".navbar-fixed-top"),
+			siteNavClass = "black top-nav-collapse",
+			$siteNav = $('#site-navigation');
+
+		function setNavBackgound(){
+			$(window).scrollTop() > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
+			$(window).scrollTop() > 50 ? $siteNav.addClass(siteNavClass) : $siteNav.removeClass(siteNavClass);
+		}
+
+		setNavBackgound();
+
 		$(document).ready(function(){
 
 			$('html').niceScroll();
@@ -43,22 +56,8 @@
 
 			$('#writeUsModal .modal-footer img').prop('src', loaderImg);
 
-
-			var topNavClass = "top-nav-collapse",
-				$navFixed = $(".navbar-fixed-top");
-
-			function setNavBackgound(){
-				$(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
-			}
-
-			console.log('2 = ' + $(window).scrollTop() );
-
-			$(".navbar").offset().top > 50 ? $(".navbar-fixed-top").addClass(topNavClass) : '';
+			setNavBackgound();
 			$(window).scroll(function(){ setNavBackgound(); });
-		});
-
-		$(window).load(function(){
-			$(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
 		});
 
 	})(window.jQuery);
