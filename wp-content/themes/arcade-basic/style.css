@@ -2105,12 +2105,12 @@ fieldset[disabled] .form-submit #submit,
 
 .btn-primary {
   color: #fff;
-  background-color: #428bca;
-  border-color: #357ebd; }
+  background-color: #00A5A1;
+  border-color: #00A5A1; }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   color: #fff;
-  background-color: #3276b1;
-  border-color: #285e8e; }
+  background-color: #168282;
+  border-color: #168282; }
 .open .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #3276b1;
@@ -5609,10 +5609,15 @@ main{
   border: 2px solid #398f14;
   background-color: #398f14;
 }
+#writeUsModal .modal-header{
+  border-color:#168282;
+  background-color: rgba(192,192,192,0.2);
+}
 #writeUsModal .modal-header .close {
   font-size: 24px;
   color: #FFF;
   text-shadow: 2px 2px 0 #000000;
+
 
   -webkit-transition: .2s;
   -moz-transition: .2s;
@@ -5630,6 +5635,7 @@ main{
   text-align: right;
   padding: 15px 20px;
   position: relative;
+  border-color: #168282;
 }
 #writeUsModal .modal-footer button,
 #writeUsModal .modal-footer input {
