@@ -41,7 +41,20 @@
 					<h4 class="modal-title"><?php _e( 'Write us', TEXTDOMAIN ); ?></h4>
 				</div>
 				<div class="modal-body">
-					<?php echo do_shortcode('[contact-form-7 id="141" title="write us (en)"]'); ?>
+					<?php
+					$currentLang = qtranxf_getLanguage();
+
+					switch ($currentLang) {
+						case 'ua':
+							echo do_shortcode('[contact-form-7 id="145" title="write us (ua)"]');
+							break;
+						case 'de':
+							echo do_shortcode('[contact-form-7 id="144" title="write us (de)"]');
+							break;
+						default:
+							echo do_shortcode('[contact-form-7 id="141" title="write us (en)"]');
+					}
+					?>
 				</div>
 			</div>
 		</div>

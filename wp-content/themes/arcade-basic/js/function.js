@@ -51,8 +51,14 @@
 				$(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
 			}
 
-			$(window).scrollTop() > 50 ? $navFixed.addClass(topNavClass) : '';
+			console.log('2 = ' + $(window).scrollTop() );
+
+			$(".navbar").offset().top > 50 ? $(".navbar-fixed-top").addClass(topNavClass) : '';
 			$(window).scroll(function(){ setNavBackgound(); });
+		});
+
+		$(window).load(function(){
+			$(".navbar").offset().top > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
 		});
 
 	})(window.jQuery);
