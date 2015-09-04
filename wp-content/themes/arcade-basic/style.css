@@ -4903,7 +4903,7 @@ iframe {
   color: #7B7B7B;
   font-size: 14px;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   clear: both;
   padding: 10px 0; }
 #footer .row {
@@ -5378,7 +5378,7 @@ a img.aligncenter {
 }
 
 .logo-head ul{
-  margin-top: 1%;
+  margin-top: 5px;
 }
 #page404 {
   height: 200px;
@@ -5543,10 +5543,20 @@ main{
 }
 #show-on-map {
   color: inherit;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
 }
 #show-on-map:hover,
 #show-on-map:hover * {
   color: #19FFF7;
+  text-decoration: none;
+}
+#show-on-map:focus{
+  text-decoration: none;
+  outline: none;
 }
 .page-top-title{
   padding: 20px 0;
@@ -5717,7 +5727,14 @@ main{
     background-image: none!important;
   }
 }
-@media (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width: 767px)  {
+  .logo-head > ul {
+   background-color: rgba(26, 127, 127, 0.61);
+   width: 150px;
+    height: 255px;
+    margin: 0;
+  }
+
   .home .title-card{
     height: 300px!important;
   }
@@ -5734,13 +5751,13 @@ main{
     padding: 20px 25px 10px;
   }
   .logo-head.container {
-    background-color: #0A5757;
-    /*background: #0A5757 url(img/ufo_smile.png) 90% 50% no-repeat;*/
-    background-size: 30%;
-    padding-right: 25px;
+    padding: 0px;
     text-align: left;
+    background: url(img/menu-bg-tablet.jpg) center center no-repeat;
+    background-size: 100% 100%;
+
   }
-  .head-menu{
+   .head-menu{
     float: left;
   }
   .navbar-inverse .navbar-nav > li > a{
@@ -5774,6 +5791,15 @@ main{
   }
   .blog_grid .img_block {
     height: auto;
+  }
+  #contact-box{
+    position: relative;
+    background-color: rgb(10, 87, 87);
+    font-size: .97em;
+  }
+  #contact-content{
+    position: static;
+    padding: 20px 25px 10px;
   }
 
 }

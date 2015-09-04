@@ -36,7 +36,7 @@ $homeContent = get_post($pageID, 'ARRAY_A');
             <li><i class="fa fa-skype" title="Skype"></i>IntegerDevCompany</li>
             <li><i class="fa fa-phone-square" title="Phone"></i>+38099 229 93 33</li>
             <li>
-                <a id="show-on-map" href="">
+                <a id="show-on-map"  target="_blank" href="https://maps.google.com/maps?t=m&amp;ll=49.8082222, 24.0171129&amp;q=49.8082222, 24.0171129&amp;output=classic&amp;z=16">
                     <i class="fa fa-globe"></i>Show on map
                 </a>
             </li>

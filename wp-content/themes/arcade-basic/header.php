@@ -23,6 +23,7 @@
 
 	<?php wp_head(); ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.nicescroll.min.js"></script>
+
 </head>
 <?php
 	$bavotasan_theme_options = bavotasan_theme_options();
@@ -30,6 +31,9 @@
 ?>
 
 <body <?php body_class(); ?>>
+	<script>
+		jQuery('html').niceScroll();
+	</script>
 
 	<span id="write-us" class='btn' data-direction='right' ><?php _e('write us', TEXTDOMAIN); ?></span> <!--data-toggle="modal" data-target="#writeUsModal"  -->
 

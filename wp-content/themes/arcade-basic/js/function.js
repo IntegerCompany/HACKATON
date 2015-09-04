@@ -38,18 +38,19 @@
 		var topNavClass = "top-nav-collapse",
 			$navFixed = $(".navbar-fixed-top"),
 			siteNavClass = "black top-nav-collapse",
-			$siteNav = $('#site-navigation');
+			$siteNav = $('#site-navigation'),
+			 headerHeight= 50;
 
 		function setNavBackgound(){
-			$(window).scrollTop() > 50 ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
-			$(window).scrollTop() > 50 ? $siteNav.addClass(siteNavClass) : $siteNav.removeClass(siteNavClass);
+			$(window).scrollTop() > headerHeight ? $navFixed.addClass(topNavClass) : $navFixed.removeClass(topNavClass);
+			$(window).scrollTop() > headerHeight ? $siteNav.addClass(siteNavClass) : $siteNav.removeClass(siteNavClass);
 		}
 
 		setNavBackgound();
 
 		$(document).ready(function(){
 
-			$('html').niceScroll();
+			//$('html').niceScroll();
 			$('#writeUsModal textarea').prop('rows', 5);
 
 			var loaderImg = 'http://localhost/HACKATON/wp-content/themes/arcade-basic/img/loader-mail.gif';
