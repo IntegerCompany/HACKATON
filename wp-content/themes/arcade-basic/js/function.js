@@ -34,6 +34,14 @@
 			$colapse.removeClass('open in');
 		});
 
+		$(document).click(function(event) {
+			if ($(event.target).closest(".collapse").length) return;
+			$(".collapse").slideUp("slow");
+			event.stopPropagation();
+		});
+
+
+
 
 		var topNavClass = "top-nav-collapse",
 			$navFixed = $(".navbar-fixed-top"),
